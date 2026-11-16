@@ -1,0 +1,133 @@
+{
+  "candidate": "[correo de inscripcion omitido]",
+  "candidate_name": "Diego Alonso Araujo Villegas",
+  "models_and_tools": [
+    {
+      "tool": "Claude Code (Anthropic)",
+      "model": "claude-sonnet-5-5"
+    },
+    {
+      "tool": "Claude Cowork (Anthropic): auditoria de la carpeta y los resultados, investigacion bibliografica y redaccion de prompts",
+      "model": "claude-opus-4-8; claude-opus-5-5"
+    },
+    {
+      "tool": "Optuna (TPE, QMC) y cmaes (CMA-ES), solo offline",
+      "model": "no aplica"
+    },
+    {
+      "tool": "pandas, numpy, matplotlib, Jupyter/nbclient, scipy (solo offline)",
+      "model": "no aplica"
+    },
+    {
+      "tool": "MarkItDown (Microsoft) para leer la bibliografia consultada",
+      "model": "no aplica"
+    },
+    {
+      "tool": "Obsidian (notas de trabajo y memoria del proyecto)",
+      "model": "no aplica"
+    },
+    {
+      "tool": "Playwright (navegador automatizado, solo para revisar visualmente la presentacion)",
+      "model": "no aplica"
+    }
+  ],
+  "evaluated_file": "candidate_strategy.py",
+  "generated_artifacts": [
+    "generated_artifacts/LEEME.md",
+    "generated_artifacts/VERIFICACION_CIFRAS.md",
+    "generated_artifacts/notebooks/01_eda_simulador.ipynb",
+    "generated_artifacts/notebooks/02_policy_componentes.ipynb",
+    "generated_artifacts/notebooks/03_tuning_optuna_random_grid_cmaes.ipynb",
+    "generated_artifacts/notebooks/04_seleccion_y_validacion.ipynb",
+    "generated_artifacts/notebooks/05_aporte_y_recursos.ipynb",
+    "generated_artifacts/presentacion/build_presentacion.py",
+    "generated_artifacts/presentacion/plantilla.html",
+    "generated_artifacts/presentacion/presentacion.html",
+    "generated_artifacts/src/ablation.py",
+    "generated_artifacts/src/ablation_dom.py",
+    "generated_artifacts/src/ablation_v2.py",
+    "generated_artifacts/src/add_candidate.py",
+    "generated_artifacts/src/build_edge.py",
+    "generated_artifacts/src/build_informe_v2.py",
+    "generated_artifacts/src/build_scenarios.py",
+    "generated_artifacts/src/build_strategy.py",
+    "generated_artifacts/src/build_submission.py",
+    "generated_artifacts/src/candidate_run1.py",
+    "generated_artifacts/src/ceilings.py",
+    "generated_artifacts/src/compliance_check.py",
+    "generated_artifacts/src/cpu_eval.py",
+    "generated_artifacts/src/cpu_probe.py",
+    "generated_artifacts/src/edge_cmp.py",
+    "generated_artifacts/src/edge_matching_check.py",
+    "generated_artifacts/src/engine_cli.py",
+    "generated_artifacts/src/estilo.py",
+    "generated_artifacts/src/evidence_bias.py",
+    "generated_artifacts/src/export_claude_code.py",
+    "generated_artifacts/src/fidelity_audit.py",
+    "generated_artifacts/src/figs.py",
+    "generated_artifacts/src/fin2_eval.py",
+    "generated_artifacts/src/final_checks.py",
+    "generated_artifacts/src/final_file_validation.py",
+    "generated_artifacts/src/final_validation.py",
+    "generated_artifacts/src/finalize_decision.py",
+    "generated_artifacts/src/lint_estilo.py",
+    "generated_artifacts/src/make_policy_v3.py",
+    "generated_artifacts/src/nb_build.py",
+    "generated_artifacts/src/nb_build02.py",
+    "generated_artifacts/src/nb_build04.py",
+    "generated_artifacts/src/nb_build05.py",
+    "generated_artifacts/src/optimize.py",
+    "generated_artifacts/src/optimize2.py",
+    "generated_artifacts/src/oracle_bound.py",
+    "generated_artifacts/src/plotstyle.py",
+    "generated_artifacts/src/policy.py",
+    "generated_artifacts/src/policy_lookahead.py",
+    "generated_artifacts/src/policy_v2.py",
+    "generated_artifacts/src/policy_v3.py",
+    "generated_artifacts/src/proxy.py",
+    "generated_artifacts/src/public_control.py",
+    "generated_artifacts/src/public_eval.py",
+    "generated_artifacts/src/rebuild_fixed.py",
+    "generated_artifacts/src/ref_simple.py",
+    "generated_artifacts/src/robust_v2.py",
+    "generated_artifacts/src/robustness.py",
+    "generated_artifacts/src/run_chain_final.ps1",
+    "generated_artifacts/src/run_opt2_forever.sh",
+    "generated_artifacts/src/scenario_gen.py",
+    "generated_artifacts/src/select_v2.py",
+    "generated_artifacts/src/sim_harness.py",
+    "generated_artifacts/src/stage_lookahead.py",
+    "generated_artifacts/src/stage_lookahead2.py",
+    "generated_artifacts/src/stage_speed.py",
+    "generated_artifacts/src/starter_baseline.py",
+    "generated_artifacts/src/sweep_v3.py",
+    "generated_artifacts/src/sweep_worker.py",
+    "generated_artifacts/src/tuning.py",
+    "generated_artifacts/src/v2data.py",
+    "generated_artifacts/src/verify_equiv2.py",
+    "generated_artifacts/tests/test_policy_unit.py"
+  ],
+  "conversation_files": [
+    "ai_conversations/claude-code-sesion-01.md",
+    "ai_conversations/cowork-sesion-01.md"
+  ],
+  "redactions": [
+    {
+      "file": "ai_conversations/claude-code-sesion-*.md",
+      "reason": "referencias a una persona ajena a la prueba: 127 sustituciones por [REDACTED: motivo]"
+    },
+    {
+      "file": "ai_conversations/claude-code-sesion-*.md",
+      "reason": "correos personales ajenos a la prueba: 5 sustituciones por [REDACTED: motivo]"
+    },
+    {
+      "file": "ai_conversations/claude-code-sesion-*.md",
+      "reason": "Salidas y entradas de herramientas recortadas a 1500 y 1800 caracteres con marcador explícito; avisos automáticos del entorno recortados; bloques de razonamiento interno que la transcripción no guarda"
+    },
+    {
+      "file": "ai_conversations/cowork-sesion-01.md",
+      "reason": "Copiada a mano por el candidato desde la interfaz en dos pegados; se conserva el texto sin reescribir y se señala el tramo intermedio que no se pudo pegar por errores. Se añadió una cabecera con herramienta, modelos, fechas y roles, etiquetas de rol entre corchetes, y un correo personal ajeno a la prueba sustituido por [REDACTED: correo personal]"
+    }
+  ],
+  "declaration": "He revisado y asumo la responsabilidad de la entrega final."
+}

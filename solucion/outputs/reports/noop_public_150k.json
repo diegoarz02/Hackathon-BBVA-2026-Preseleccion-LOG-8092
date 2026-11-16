@@ -1,0 +1,150 @@
+{
+  "batching": {
+    "accepted_batches": 0,
+    "average_batch_size": 0.0,
+    "dispatched_shipments": 0,
+    "efficiency": 0.0
+  },
+  "costs": {
+    "contingency_exceeded": true,
+    "contingency_threshold_cents": 99000000,
+    "contingency_used": true,
+    "dispatch_cents": 0,
+    "over_contingency_cents": 201000000,
+    "over_reference_cents": 210000000,
+    "penalty_cents": 300000000,
+    "reference_budget_cents": 90000000,
+    "total_cents": 300000000,
+    "upgrade_cents": 0
+  },
+  "counts": {
+    "accepted_attempts": 0,
+    "accepted_batches": 0,
+    "admitted": 150000,
+    "delivered": 0,
+    "failed_attempts": 0,
+    "rejected_dispatches": 0,
+    "returned_to_vault": 0,
+    "successful_attempts": 0,
+    "unresolved": 150000,
+    "voluntary_hold_breaches": 150000
+  },
+  "diagnostics": {
+    "carrier_dispatch": {},
+    "dispatch_rejections": {
+      "BATCH_CAPACITY_EXCEEDED": 0,
+      "CAPABILITY_UNSUPPORTED": 0,
+      "DUPLICATE_SHIPMENT": 0,
+      "EMPTY_BATCH": 0,
+      "MIXED_ATTEMPT_NUMBER": 0,
+      "MIXED_DELIVERY_CLUSTER": 0,
+      "MIXED_ZONE": 0,
+      "NO_AVAILABLE_UNIT": 0,
+      "OUTSIDE_OPERATING_WINDOW": 0,
+      "SHIPMENT_NOT_READY": 0,
+      "TERMINAL_SHIPMENT": 0,
+      "UNKNOWN_CARRIER": 0,
+      "UNKNOWN_SHIPMENT": 0,
+      "ZONE_UNSUPPORTED": 0
+    },
+    "status_detail": null,
+    "upgrade_rejections": {
+      "INVALID_QUANTITY": 0,
+      "PER_PERIOD_LIMIT_EXCEEDED": 0,
+      "UNKNOWN_CARRIER": 0,
+      "UNKNOWN_UPGRADE": 0,
+      "UNSUPPORTED_UPGRADE": 0
+    }
+  },
+  "failures": {
+    "attempt_failure_rate": null,
+    "by_reason": {
+      "CUSTOMER_ABSENT": 0,
+      "INACCESSIBLE_ROUTE": 0,
+      "OPERATIONAL_DELAY": 0
+    },
+    "delivery_failure_rate": 1.0
+  },
+  "integrity": {
+    "candidate_sha256": "97bb4f307d0acd58e1e490ae6d3722dc8afeaf243aace4fdd14c87df71ecdf78",
+    "protected_files_pristine": true
+  },
+  "lead_time_minutes": {
+    "max": null,
+    "mean": null,
+    "p50": null,
+    "p95": null
+  },
+  "rcp": {
+    "by_audience": {
+      "INFLUENCER": {
+        "eligible_recipients": 4190,
+        "submitted_opinions": 4190,
+        "weighted_score": 1.0
+      },
+      "NORMAL": {
+        "eligible_recipients": 138238,
+        "submitted_opinions": 138238,
+        "weighted_score": 1.0
+      },
+      "VIP": {
+        "eligible_recipients": 7572,
+        "submitted_opinions": 7572,
+        "weighted_score": 1.0
+      }
+    },
+    "submitted_opinions": 150000,
+    "total_impact_weight_bps": 1869020000,
+    "unweighted_score": 1.0,
+    "weighted_score": 1.0
+  },
+  "resources": {
+    "cpu_seconds": 19.75,
+    "peak_rss_bytes": 28749824
+  },
+  "scenario": {
+    "admission_end": "2026-04-05T00:00:00-05:00",
+    "scenario_id": "PUBLIC-150K-264538C2",
+    "seed_fingerprint": "sha256:2a6d105f72bdc4d5e1ca9da3171789a846f72a984baddcd1339544e7f7d0f496",
+    "simulation_end": "2026-04-22T18:00:00-05:00",
+    "simulation_start": "2026-01-05T00:00:00-05:00"
+  },
+  "schema_version": "0.4.0",
+  "sla": {
+    "breach_rate": 1.0,
+    "breached": 150000,
+    "by_product": {
+      "BUSINESS": {
+        "admitted": 27084,
+        "breach_rate": 1.0,
+        "breached": 27084
+      },
+      "SME": {
+        "admitted": 33009,
+        "breach_rate": 1.0,
+        "breached": 33009
+      },
+      "STANDARD": {
+        "admitted": 82335,
+        "breach_rate": 1.0,
+        "breached": 82335
+      },
+      "VIP_BLACK": {
+        "admitted": 7572,
+        "breach_rate": 1.0,
+        "breached": 7572
+      }
+    }
+  },
+  "spec_version": "0.4.0",
+  "status": "COMPLETED",
+  "upgrades": {
+    "accepted_decisions": 0,
+    "accepted_quantity_by_type": {
+      "EXPANDED_CAPACITY": 0,
+      "EXTRA_UNIT": 0,
+      "SPEED_SHIFT": 0
+    },
+    "rejected_decisions": 0
+  }
+}

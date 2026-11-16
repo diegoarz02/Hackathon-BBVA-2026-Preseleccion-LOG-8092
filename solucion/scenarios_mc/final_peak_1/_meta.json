@@ -1,0 +1,24 @@
+{
+  "scenario": "SYN-PEAK-12101",
+  "kind": "peak",
+  "seed": 12101,
+  "n": 7838,
+  "carriers": 5,
+  "cluster_share": 0.203,
+  "night_factor": 0.0,
+  "peaks": [
+    [
+      10,
+      7,
+      2.21684204691903
+    ]
+  ],
+  "holidays": [
+    "2026-02-07",
+    "2026-04-03"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 24
+}

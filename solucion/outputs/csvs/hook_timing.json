@@ -1,0 +1,14 @@
+{
+ "max_hook_s": 0.049098,
+ "svc_dispatch_calls": 128238,
+ "svc_dispatch_us_per_call": 334.8865850995747,
+ "own_compute_s": 6.851610300001312,
+ "hook_totals_s": {
+  "on_shipments_available": 44.61225300000055,
+  "on_dispatch_tick": 4.909560699999992,
+  "on_delivery_failed": 0.13642820000000033,
+  "on_delivery_succeeded": 0.13844530000003136,
+  "on_monthly_planning": 0.00010899999999999999
+ },
+ "nota": "tiempos de pared dentro de los hooks (copia instrumentada, 150 k); el max incluye esperas al motor"
+}

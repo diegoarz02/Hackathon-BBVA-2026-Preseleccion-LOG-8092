@@ -1,0 +1,6 @@
+optimizador,ensayos,mejor_J,ensayo_del_mejor,wall_a_mejor_s,tiempo_medio_ensayo_s,J_medio_top5,J_mediana_ensayos,ensayos_hasta_J<=umbral,coste/ref,lead/ref,p95/ref,rcp,gates_violados_en_mejor
+grid,60,3.6471,4,58,16.0,3.6671,3.794,4,1.036,0.824,0.95,9.916,0
+random,60,3.6534,7,114,15.7,3.6867,3.88,7,1.06,0.84,0.953,9.923,0
+sobol,60,3.6364,4,64,16.2,3.6844,3.845,4,1.034,0.83,0.953,9.924,0
+tpe,60,3.6603,28,449,16.0,3.6712,3.804,2,1.058,0.827,0.95,9.922,0
+cmaes,60,3.6553,48,765,15.9,3.666,3.739,16,1.042,0.829,0.952,9.924,0

@@ -1,0 +1,7 @@
+scenario,coste_pct,lead_pct,p95_pct,rcp_delta,lote_oraculo,lote_final
+tune_base_0,-0.7,-3.7,-0.78,0.003,1.279,1.274
+tune_peak_1,-0.21,-2.51,-0.26,0.006,1.407,1.406
+tune_rural_holiday_0,-0.42,-0.14,0.0,0.001,1.291,1.288
+tune_catalog_1,-0.25,-2.81,-0.45,0.007,1.146,1.143
+hold_base_1,-0.27,-2.04,-0.78,0.001,1.316,1.314
+hold_peak_2,0.15,-1.63,-0.45,-0.006,1.36,1.358

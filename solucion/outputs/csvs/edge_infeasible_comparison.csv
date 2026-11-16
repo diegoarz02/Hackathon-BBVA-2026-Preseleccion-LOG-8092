@@ -1,0 +1,10 @@
+scenario,candidato,unresolved,sla_breach_rate,hold_breaches,cost_total,lead_mean
+edge_no_hard_access,starter,83,0.044,27,2631539,509.446
+edge_zone_uncovered,starter,463,0.1892,30,3059670,235.997
+edge_burst_1500,starter,7,0.353333,3,1283935,8944.117
+edge_no_hard_access,run1,82,0.0412,0,2410887,258.28
+edge_zone_uncovered,run1,452,0.1848,0,2482179,212.008
+edge_burst_1500,run1,0,0.076,0,1362137,7758.839
+edge_no_hard_access,final,82,0.0412,0,2410887,258.28
+edge_zone_uncovered,final,452,0.1848,0,2482179,212.008
+edge_burst_1500,final,0,0.076,0,1362137,7758.839

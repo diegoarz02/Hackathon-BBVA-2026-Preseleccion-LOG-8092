@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Despacho de tarjetas LOG-8092 | Hackaton BBVA 2026</title>
+<style>
+:root{
+  --blue:#004481; --navy:#070E46; --mid:#1973B8; --sky:#5BBEFF; --aqua:#2DCCCD; --yellow:#F8CD51; --coral:#F35E61; --green:#48AE64;
+  --bg:#F4F6F9; --card:#FFFFFF; --ink:#11192D; --ink2:#4A5568; --line:#D8DEE9; --tint:#E8F1FA;
+  --radius:14px; --shadow:0 1px 2px rgba(7,14,70,.06),0 6px 20px rgba(7,14,70,.07);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0B1230;--card:#111B42;--ink:#EAF0FA;--ink2:#A9B6D3;--line:#243061;--tint:#16224F;--shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.3)}}
+:root[data-theme="dark"]{--bg:#0B1230;--card:#111B42;--ink:#EAF0FA;--ink2:#A9B6D3;--line:#243061;--tint:#16224F;--shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.3)}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;overflow-x:hidden}
+body{font-family:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.45}
+button{font:inherit;color:inherit;cursor:pointer}
+h1,h2,h3,h4{margin:0;line-height:1.15}
+.topbar{position:sticky;top:0;z-index:20;display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;padding:10px 24px;background:var(--navy);color:#fff}
+.brand{font-weight:700;letter-spacing:.04em;white-space:nowrap}
+.brand small{font-weight:400;opacity:.75;margin-left:8px;letter-spacing:0}
+.tabs{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap;justify-content:flex-end;min-width:0}
+.tab{background:transparent;border:0;color:#cfe0f5;padding:8px 14px;border-radius:999px;font-size:14px}
+.tab:hover{background:rgba(255,255,255,.1)}
+.tab[aria-selected="true"]{background:var(--sky);color:var(--navy);font-weight:600}
+.theme{background:transparent;border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:999px;padding:6px 12px;font-size:13px}
+main{max-width:1440px;width:100%;margin:0 auto;padding:18px 28px 84px}
+.slide{display:none;animation:in .28s ease}
+.slide.active{display:block}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.kicker{color:var(--mid);font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+h2.title{font-size:28px;margin:6px 0 4px;color:var(--blue)}
+:root[data-theme="dark"] h2.title{color:var(--sky)}
+.lead{color:var(--ink2);max-width:920px;margin:0 0 16px}
+.seg{display:inline-flex;background:var(--tint);border-radius:999px;padding:4px;gap:2px;margin:6px 0 14px;flex-wrap:wrap}
+.seg button{border:0;background:transparent;padding:8px 16px;border-radius:999px;font-size:14px;color:var(--ink2)}
+.seg button[aria-pressed="true"]{background:var(--blue);color:#fff;font-weight:600}
+.pane{display:none}.pane.on{display:block;animation:in .25s ease}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media(max-width:980px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.g2,.g3,.g4{grid-template-columns:1fr}.tabs{margin-left:0}.topbar{flex-wrap:wrap}h2.title{font-size:23px}}
+.kpi .v{font-size:42px;font-weight:700;color:var(--blue);letter-spacing:-.02em}
+:root[data-theme="dark"] .kpi .v{color:var(--sky)}
+.kpi .l{color:var(--ink2);font-size:13px}
+.kpi .d{font-size:12.5px;margin-top:4px;color:var(--ink2)}
+.good{color:#1B8A4B;font-weight:600}.bad{color:#C93C3F;font-weight:600}
+.chip{display:inline-block;background:var(--tint);color:var(--blue);border-radius:999px;padding:3px 10px;font-size:12px;margin:2px 4px 2px 0;font-weight:600}
+:root[data-theme="dark"] .chip{color:var(--sky)}
+.chip.ok{background:#DFF3E5;color:#14683A}.chip.warn{background:#FFF1CC;color:#7A5A00}.chip.risk{background:#FDE3E4;color:#A32A2D}
+.cover{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:26px;align-items:stretch}
+#s1.active{display:flex;align-items:center;min-height:calc(100vh - 150px)}
+#s1 .cover{width:100%}
+.cover>div:last-child{display:flex;flex-direction:column}
+.cover .toggle{align-self:flex-start}
+#coverKpis{grid-auto-rows:1fr}
+#coverKpis .kpi{display:flex;flex-direction:column;justify-content:center;padding:30px 26px;min-height:190px}
+#coverKpis .kpi .v{font-size:clamp(40px,3.6vw,60px)}
+#coverKpis .kpi .l{font-size:16px}
+@media(max-width:900px){.cover{grid-template-columns:1fr}}
+.hero{display:flex;flex-direction:column;justify-content:space-between;gap:40px;background:linear-gradient(135deg,var(--blue) 0%,var(--navy) 100%);color:#fff;border-radius:20px;padding:44px 40px 36px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.hero:after{content:"";position:absolute;right:-70px;top:-70px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(91,190,255,.45),transparent 65%)}
+.hero h1{font-size:clamp(32px,3.4vw,54px);letter-spacing:-.02em;max-width:820px;position:relative;margin:auto 0}
+.hero p{max-width:600px;opacity:.9;position:relative}
+.hero .who{margin-top:0;border-top:1px solid rgba(255,255,255,.25);padding-top:14px;position:relative}
+.hero .who b{font-size:18px}
+.hero .chip{background:rgba(255,255,255,.14);color:#fff}
+.toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;margin-bottom:10px;background:var(--card)}
+.toggle button{border:0;background:transparent;padding:6px 14px;font-size:13px;color:var(--ink2)}
+.toggle button[aria-pressed="true"]{background:var(--aqua);color:var(--navy);font-weight:700}
+svg{max-width:100%}
+.flow text{font-size:12.5px;fill:var(--ink)}
+.node{cursor:pointer}
+.node rect{fill:var(--card);stroke:var(--mid);stroke-width:1.6;transition:all .15s}
+.node:hover rect,.node.sel rect{fill:var(--blue);stroke:var(--blue)}
+.node:hover text,.node.sel text{fill:#fff}
+.node .n{font-weight:700;fill:var(--mid)}
+.node:hover .n,.node.sel .n{fill:var(--sky)}
+.edge{stroke:var(--ink2);stroke-width:1.6;fill:none}
+.detail h3{color:var(--blue);margin-bottom:6px}
+:root[data-theme="dark"] .detail h3{color:var(--sky)}
+.detail dt{font-weight:700;margin-top:8px;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--mid)}
+.detail dd{margin:2px 0 0}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:left}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink2)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--ink2);margin:6px 0}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.pill{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:5px 12px;font-size:13px;margin:2px 4px 2px 0}
+.pill[aria-pressed="true"]{background:var(--blue);color:#fff;border-color:var(--blue)}
+select{font:inherit;padding:6px 10px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.bar{height:14px;border-radius:7px;background:var(--tint);overflow:hidden;position:relative}
+.bar>span{position:absolute;left:0;top:0;bottom:0;border-radius:7px}
+.note{font-size:12.5px;color:var(--ink2)}
+.steps{counter-reset:s}
+.steps li{margin:6px 0}
+.footer{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--line);display:flex;align-items:center;justify-content:center;gap:16px;padding:6px 24px;z-index:15}
+.footer .who{font-size:12.5px;color:var(--ink2);margin-right:auto}
+.dots{display:flex;gap:6px}.dots button{width:10px;height:10px;border-radius:50%;border:0;background:var(--line);padding:0}
+.dots button[aria-current="true"]{background:var(--blue);width:26px;border-radius:6px}
+.nav{background:var(--blue);color:#fff;border:0;border-radius:50%;width:38px;height:38px;font-size:24px;line-height:1;padding:0 0 3px}
+.nav:disabled{opacity:.35;cursor:default}
+.timeline{border-left:3px solid var(--sky);padding-left:16px;margin-left:6px}
+.timeline .ev{margin:0 0 14px;position:relative}
+.timeline .ev:before{content:"";position:absolute;left:-24px;top:4px;width:11px;height:11px;border-radius:50%;background:var(--blue);border:2px solid var(--card)}
+.col h3{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--mid);margin-bottom:8px}
+.item{border-left:4px solid var(--sky);padding:6px 0 6px 12px;margin:0 0 10px}
+.item b{display:block}
+.idea{display:flex;gap:12px;align-items:flex-start;background:var(--tint);border-left:5px solid var(--blue);border-radius:10px;padding:10px 14px;margin:6px 0 14px;max-width:980px}
+.idea b{color:var(--blue);white-space:nowrap}
+:root[data-theme="dark"] .idea b{color:var(--sky)}
+@media print{
+    .topbar,.footer,.seg,.toggle,.tabs{display:none!important}
+  .slide{display:block!important;page-break-after:always;min-height:96vh}
+  .pane{display:block!important}
+  body{background:#fff}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">HACKATON BBVA 2026<small>Reto LOG-8092 · entrega de tarjetas</small></div>
+  <nav class="tabs" id="tabs" role="tablist" aria-label="Secciones"></nav>
+  <button class="theme" id="themeBtn" aria-label="Cambiar tema claro u oscuro">Tema</button>
+</header>
+
+<main>
+<!-- 1 CARATULA -->
+<section class="slide active" id="s1" data-title="Inicio">
+  <div class="cover">
+    <div class="hero">
+      <h1>Despachar tarjetas más rápido y más barato, sin romper ninguna regla del servicio</h1>
+      <div class="who"><b>Diego Alonso Araujo Villegas</b><br>Universidad Nacional Mayor de San Marcos</div>
+    </div>
+    <div>
+      <div class="toggle" role="group" aria-label="Escenario público"><button data-pub="5k" aria-pressed="true">5 000 tarjetas</button><button data-pub="150k" aria-pressed="false">150 000 tarjetas</button></div>
+      <div class="grid g2" id="coverKpis"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 PROBLEMATICA -->
+<section class="slide" id="s2" data-title="Problema">
+  <div class="kicker" id="k2"></div>
+  <h2 class="title" id="t2"></h2>
+  <div class="idea"><b>Idea clave</b><span id="i2"></span></div>
+  <div class="seg" role="group" aria-label="Vista de la problemática" data-group="p2">
+    <button data-pane="p2a" aria-pressed="true">El servicio</button><button data-pane="p2b" aria-pressed="false">Los datos</button><button data-pane="p2c" aria-pressed="false">El punto de partida</button>
+  </div>
+  <div class="pane on" id="p2a">
+    <div class="card"><svg id="lifeSvg" class="flow" viewBox="0 0 1100 190" role="img" aria-label="Ciclo de vida de una tarjeta"></svg></div>
+    <div class="grid g4" style="margin-top:14px" id="gateCards"></div>
+  </div>
+  <div class="pane" id="p2b">
+    <div class="grid g4" id="dataKpis"></div>
+    <div class="grid g2" style="margin-top:14px">
+      <div class="card"><h3 style="font-size:15px;margin-bottom:8px">Mezcla de productos (5 000 tarjetas públicas)</h3><div id="mixProd"></div></div>
+      <div class="card"><h3 style="font-size:15px;margin-bottom:8px">Mezcla de zonas</h3><div id="mixZone"></div></div>
+    </div>
+    <div class="card" style="margin-top:14px"><h3 style="font-size:15px;margin-bottom:6px">Qué datos usé</h3><ul id="dataList" style="margin:0;padding-left:18px"></ul></div>
+  </div>
+  <div class="pane" id="p2c">
+    <div class="toggle" role="group" aria-label="Escenario público"><button data-pub2="5k" aria-pressed="true">5 000 tarjetas</button><button data-pub2="150k" aria-pressed="false">150 000 tarjetas</button></div>
+    <div class="grid g4" id="startKpis"></div>
+    <div class="grid g2" style="margin-top:14px" id="defectCards"></div>
+  </div>
+</section>
+
+<!-- 3 SOLUCION -->
+<section class="slide" id="s3" data-title="Solución">
+  <div class="kicker" id="k3"></div>
+  <h2 class="title" id="t3"></h2>
+  <div class="idea"><b>Idea clave</b><span id="i3"></span></div>
+  <div class="seg" role="group" aria-label="Vista de la solución" data-group="p3">
+    <button data-pane="p3a" aria-pressed="true">Cómo decide</button><button data-pane="p3b" aria-pressed="false">Resultados</button><button data-pane="p3c" aria-pressed="false">Qué se evalúa</button>
+  </div>
+  <div class="pane on" id="p3a">
+    <div class="grid" style="grid-template-columns:1.7fr 1fr;gap:14px" id="flowGrid">
+      <div class="card"><svg id="flowSvg" class="flow" viewBox="0 0 900 480" role="img" aria-label="Flujo de decisión por tick"></svg><p class="note">Selecciona una pieza para ver qué hace, por qué y con qué evidencia.</p></div>
+      <div class="card detail" id="flowDetail"></div>
+    </div>
+  </div>
+  <div class="pane" id="p3b">
+    <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center">
+      <div><span class="note">Conjunto</span><br><span id="setBtns"></span></div>
+      <div><span class="note">Comparar con</span><br><span id="refBtns"></span></div>
+      <div id="kindWrap"><span class="note">Tipo de escenario</span><br><span id="kindBtns"></span></div>
+    </div>
+    <div class="grid g2" style="margin-top:12px">
+      <div class="card"><div id="beforeAfter"></div><div class="legend"><span><i style="background:var(--line)"></i>Referencia = 100 %</span><span><i style="background:var(--blue)"></i>Propuesta</span></div></div>
+      <div class="card" id="baNotes"></div>
+    </div>
+  </div>
+  <div class="pane" id="p3c">
+    <div class="grid g2">
+      <div class="card"><h3 style="font-size:15px;margin-bottom:8px">Siete características, 20 puntos cada una</h3><table id="scoreTable"></table></div>
+      <div class="card"><h3 style="font-size:15px;margin-bottom:8px">Peso de cada tipo de escenario en las métricas de negocio</h3><div id="weights"></div><p class="note" style="margin-top:10px">La nota compara a cada candidato con los demás por percentiles. No conozco las otras entregas, así que mi evidencia es la dominancia sobre el punto de partida y los márgenes sobre las referencias simples.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 EVIDENCIA -->
+<section class="slide" id="s4" data-title="Metodología">
+  <div class="kicker" id="k4"></div>
+  <h2 class="title" id="t4"></h2>
+  <div class="idea"><b>Idea clave</b><span id="i4"></span></div>
+  <div class="seg" role="group" aria-label="Vista de la evidencia" data-group="p4">
+    <button data-pane="p4a" aria-pressed="true">Optimización</button><button data-pane="p4b" aria-pressed="false">Selección</button><button data-pane="p4c" aria-pressed="false">Validación</button><button data-pane="p4d" aria-pressed="false">Aporte de cada pieza</button>
+  </div>
+  <div class="pane on" id="p4a">
+    <div class="grid" style="grid-template-columns:1.4fr 1fr;gap:14px">
+      <div class="card"><div id="optLegend" class="legend"></div><svg id="optSvg" viewBox="0 0 640 300" role="img" aria-label="Convergencia de los optimizadores"></svg><p class="note">Mejor valor del objetivo hasta cada ensayo (menor es mejor). Pulsa un optimizador para resaltarlo.</p></div>
+      <div class="card"><table id="optTable"></table><p class="note" style="margin-top:8px" id="optNote"></p></div>
+    </div>
+  </div>
+  <div class="pane" id="p4b">
+    <div class="grid" style="grid-template-columns:1.2fr 1fr;gap:14px">
+      <div class="card"><svg id="selSvg" viewBox="0 0 640 320" role="img" aria-label="Puntos proxy por candidato"></svg><div class="legend"><span><i style="background:var(--blue)"></i>Elegible</span><span><i style="background:var(--yellow)"></i>Incumbente</span><span><i style="background:#9AA7BF"></i>No elegible</span></div></div>
+      <div class="card"><h3 style="font-size:15px;margin-bottom:6px">Regla de decisión</h3><ol class="steps" id="selRules" style="padding-left:18px;margin:0"></ol><div id="selWinner" style="margin-top:10px"></div></div>
+    </div>
+  </div>
+  <div class="pane" id="p4c">
+    <div style="display:flex;gap:18px;flex-wrap:wrap;align-items:center">
+      <div><span class="note">Conjunto</span><br><span id="vSetBtns"></span></div>
+      <div><span class="note">Métrica</span><br><span id="vMetBtns"></span></div>
+    </div>
+    <div class="grid" style="grid-template-columns:1.5fr 1fr;gap:14px;margin-top:10px">
+      <div class="card"><svg id="dumbSvg" role="img" aria-label="Resultado por escenario"></svg><div class="legend"><span><i style="background:var(--blue)"></i>Propuesta</span><span><i style="background:var(--yellow)"></i>Punto de partida (=100 % o 0)</span></div></div>
+      <div class="card"><table id="gateTable"></table><p class="note" style="margin-top:8px">Gates: sin UNRESOLVED, SLA ≤ 6 %, sin infracciones de retención, estado COMPLETED y dentro del tiempo.</p><div id="controls" style="margin-top:10px"></div></div>
+    </div>
+  </div>
+  <div class="pane" id="p4d">
+    <div class="card"><div class="legend"><span><i style="background:var(--blue)"></i>Puntos de cohorte al quitar la pieza</span><span><i style="background:var(--aqua)"></i>Propuesta completa</span></div><svg id="ablSvg" viewBox="0 0 760 340" role="img" aria-label="Aporte de cada pieza"></svg><p class="note" id="ablNote"></p></div>
+  </div>
+  </section>
+
+<!-- 5 CONCLUSIONES -->
+<section class="slide" id="s5" data-title="Conclusiones">
+  <div class="kicker" id="k5"></div>
+  <h2 class="title" id="t5"></h2>
+  <div class="idea"><b>Idea clave</b><span id="i5"></span></div>
+  <div class="grid g3" style="margin-top:12px">
+    <div class="card col"><h3>Conclusiones</h3><div id="concl"></div></div>
+    <div class="card col"><h3>Alcance y limitaciones</h3><div id="limit"></div></div>
+    <div class="card col"><h3>Siguientes pasos recomendados</h3><div id="next"></div></div>
+  </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <button class="nav" id="prev" aria-label="Diapositiva anterior">&#8249;</button>
+  <div class="dots" id="dots" role="tablist" aria-label="Diapositivas"></div>
+  <button class="nav" id="next_" aria-label="Diapositiva siguiente">&#8250;</button>
+</footer>
+
+<script>
+const DATA = /*DATA*/null;
+</script>
+<script>
+/* ---------- utilidades ---------- */
+const $ = (s, r=document) => r.querySelector(s), $$ = (s, r=document) => [...r.querySelectorAll(s)];
+const el = (t, a={}, h="") => { const e = document.createElement(t); for (const k in a) e.setAttribute(k, a[k]); e.innerHTML = h; return e; };
+const fmt = (x, d=0) => (x===null||x===undefined||isNaN(x)) ? "n/d" : Number(x).toLocaleString("es-PE",{minimumFractionDigits:d,maximumFractionDigits:d});
+const pct = (a,b,d=1) => { const v = 100*(a/b-1); return (v>0?"+":v<0?"−":"")+fmt(Math.abs(v),d)+" %"; };
+const NS = "http://www.w3.org/2000/svg";
+const sv = (t, a={}, h="") => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); if (h) e.textContent = h; return e; };
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const D = DATA;
+
+/* ---------- navegación ---------- */
+const slides = $$("main .slide"); let cur = 0;
+const tabs = $("#tabs"), dots = $("#dots");
+slides.forEach((s,i) => {
+  tabs.appendChild(el("button",{class:"tab",role:"tab","aria-selected":i==0,"data-i":i},`${i+1}. ${s.dataset.title}`));
+  dots.appendChild(el("button",{"aria-label":s.dataset.title,"aria-current":i==0,"data-i":i}));
+});
+function go(i){ cur = Math.max(0,Math.min(slides.length-1,i));
+  slides.forEach((s,k)=>s.classList.toggle("active",k==cur));
+  $$(".tab").forEach((t,k)=>t.setAttribute("aria-selected",k==cur));
+  $$("#dots button").forEach((t,k)=>t.setAttribute("aria-current",k==cur));
+  $("#prev").disabled = cur==0; $("#next_").disabled = cur==slides.length-1; window.scrollTo(0,0);
+  try{ history.replaceState(null,"","#"+(cur+1)); }catch(e){} }
+tabs.addEventListener("click",e=>{const b=e.target.closest("button"); if(b) go(+b.dataset.i)});
+dots.addEventListener("click",e=>{const b=e.target.closest("button"); if(b) go(+b.dataset.i)});
+$("#prev").onclick=()=>go(cur-1); $("#next_").onclick=()=>go(cur+1);
+document.addEventListener("keydown",e=>{ if(["INPUT","SELECT","TEXTAREA"].includes(e.target.tagName)) return; if(e.key=="ArrowRight"||e.key=="PageDown") go(cur+1); if(e.key=="ArrowLeft"||e.key=="PageUp") go(cur-1); });
+$$(".seg").forEach(g => g.addEventListener("click",e=>{const b=e.target.closest("button"); if(!b) return;
+  $$("button",g).forEach(x=>x.setAttribute("aria-pressed",x==b)); const sec=g.closest(".slide");
+  $$(".pane",sec).forEach(p=>p.classList.toggle("on",p.id==b.dataset.pane)); if(window.afterPane) afterPane(b.dataset.pane); }));
+$("#themeBtn").onclick=()=>{ const r=document.documentElement; const dark = r.dataset.theme=="dark" || (!r.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches); r.dataset.theme = dark ? "light" : "dark"; redrawAll(); };
+function group(container, items, onpick, initial){ container.innerHTML=""; items.forEach(([k,l])=>{ const b=el("button",{class:"pill","aria-pressed":k==initial,"data-k":k},l); b.onclick=()=>{ $$("button",container).forEach(x=>x.setAttribute("aria-pressed",x==b)); onpick(k); }; container.appendChild(b); }); }
+
+/* ---------- 1 carátula ---------- */
+let pubSel = "5k";
+function kpiCard(v,l,d){ return `<div class="card kpi"><div class="v">${v}</div><div class="l">${l}</div><div class="d">${d||""}</div></div>`; }
+function drawCover(){
+  const p = D.pub[pubSel], s = p.starter, f = p.final;
+  $("#coverKpis").innerHTML =
+    kpiCard(pct(f.cost,s.cost,0), "Coste total") + kpiCard(pct(f.lead,s.lead,0), "Tiempo medio de entrega") +
+    kpiCard(fmt(f.unresolved), "Tarjetas sin resolver") + kpiCard(fmt(f.ram,0)+" MiB", "Memoria pico");
+}
+$$("[data-pub]").forEach(b=>b.onclick=()=>{ pubSel=b.dataset.pub; $$("[data-pub]").forEach(x=>x.setAttribute("aria-pressed",x==b)); drawCover(); });
+
+/* ---------- 2 problemática ---------- */
+function drawLife(){
+  const svg=$("#lifeSvg"); svg.innerHTML="";
+  const defs=sv("defs"); const m=sv("marker",{id:"arrL",viewBox:"0 0 10 10",refX:"9",refY:"5",markerWidth:"7",markerHeight:"7",orient:"auto-start-reverse"}); m.appendChild(sv("path",{d:"M0 0L10 5L0 10z",fill:css("--ink2")})); defs.appendChild(m); svg.appendChild(defs);
+  const N=[["Llega la tarjeta","producto, zona, destino"],["Espera permitida","hasta 45 min para agrupar"],["Despacho","un lote por viaje y carrier"],["Entrega","dentro del plazo (SLA)"],["Fallo","reintento 24 h después"],["Tercer fallo","vuelve a custodia"]];
+  N.forEach((n,i)=>{ const x=14+i*180, y=60; const g=sv("g",{class:"node"}); g.appendChild(sv("rect",{x,y,width:160,height:70,rx:12})); g.appendChild(sv("text",{x:x+80,y:y+30,"text-anchor":"middle","font-weight":"700",style:"font-size:14px"},n[0])); g.appendChild(sv("text",{x:x+80,y:y+52,"text-anchor":"middle",style:"font-size:12px;fill:"+css("--ink2")},n[1])); svg.appendChild(g);
+    if(i<N.length-1) svg.appendChild(sv("path",{class:"edge","marker-end":"url(#arrL)",d:`M${x+160} ${y+35}H${x+180}`})); });
+  svg.appendChild(sv("text",{x:14,y:30,style:"font-size:13px;font-weight:700;fill:"+css("--mid")},"Ciclo de vida de una tarjeta (decisión cada 15 minutos simulados, durante 90 días de admisión)"));
+  svg.appendChild(sv("text",{x:14,y:165,style:"font-size:12px;fill:"+css("--ink2")},"Si hay un carrier compatible y libre pasado el plazo de espera, mantener la tarjeta pendiente cuenta como infracción de retención."));
+}
+function drawGates(){ $("#gateCards").innerHTML = D.gates_def.map(g=>kpiCard(g[0],g[1],g[2])).join(""); }
+function drawData(){
+  $("#dataKpis").innerHTML = D.data_kpis.map(k=>kpiCard(k[0],k[1],k[2])).join("");
+  const stack=(id,items,cols)=>{ const w=$(id); w.innerHTML=items.map(([k,v],i)=>`<div style="display:flex;align-items:center;gap:10px;margin:6px 0"><span style="width:92px;font-size:13px">${k}</span><div class="bar" style="flex:1"><span style="width:${v*100}%;background:${cols[i%cols.length]}"></span></div><span style="width:48px;text-align:right;font-variant-numeric:tabular-nums">${fmt(v*100,1)} %</span></div>`).join(""); };
+  stack("#mixProd",D.mix_prod,[css("--blue"),css("--mid"),css("--sky"),css("--yellow")]); stack("#mixZone",D.mix_zone,[css("--blue"),css("--mid"),css("--sky"),css("--coral")]);
+  $("#dataList").innerHTML = D.data_list.map(t=>`<li style="margin:4px 0">${t}</li>`).join("");
+}
+let pub2="5k";
+function drawStart(){
+  const s=D.pub[pub2].starter;
+  $("#startKpis").innerHTML = kpiCard(fmt(s.unresolved),"tarjetas sin resolver","Incumple el requisito de no dejar ninguna") + kpiCard(fmt(s.hold),"infracciones de retención","Pendientes con carrier libre pasado el plazo") + kpiCard(fmt(s.batch,2),"tarjetas por lote","El motor cobra un coste fijo por viaje") + kpiCard(fmt(s.ram,0)+" MiB","memoria pico","Crece con el número de envíos");
+  $("#defectCards").innerHTML = D.defects.map(d=>`<div class="card"><b>${d[0]}</b><p style="margin:6px 0 0" class="note">${d[1]}</p></div>`).join("");
+}
+$$("[data-pub2]").forEach(b=>b.onclick=()=>{ pub2=b.dataset.pub2; $$("[data-pub2]").forEach(x=>x.setAttribute("aria-pressed",x==b)); drawStart(); });
+
+/* ---------- 3 solución ---------- */
+function drawFlow(selId){
+  const svg=$("#flowSvg"); svg.innerHTML="";
+  const defs=sv("defs"); const m=sv("marker",{id:"arrF",viewBox:"0 0 10 10",refX:"9",refY:"5",markerWidth:"7",markerHeight:"7",orient:"auto-start-reverse"}); m.appendChild(sv("path",{d:"M0 0L10 5L0 10z",fill:css("--ink2")})); defs.appendChild(m); svg.appendChild(defs);
+  const W=250,H=88,pos=[[20,24],[325,24],[630,24],[630,174],[325,174],[20,174],[325,324]];
+  D.flow.forEach((n,i)=>{ const [x,y]=pos[i]; const g=sv("g",{class:"node"+(selId==n.id?" sel":""),"data-id":n.id,tabindex:0,role:"button","aria-label":n.titulo});
+    g.appendChild(sv("rect",{x,y,width:W,height:H,rx:14})); g.appendChild(sv("text",{x:x+16,y:y+32,class:"n",style:"font-size:17px"},String(i+1))); g.appendChild(sv("text",{x:x+40,y:y+32,"font-weight":"700",style:"font-size:17px"},n.titulo)); g.appendChild(sv("text",{x:x+16,y:y+62,style:"font-size:13.5px"},n.corto));
+    g.onclick=()=>{ showFlow(n.id); }; g.onkeydown=e=>{ if(e.key=="Enter"||e.key==" ") showFlow(n.id); }; svg.appendChild(g); });
+  const E=[[0,1,"H"],[1,2,"H"],[2,3,"V"],[3,4,"Hr"],[4,5,"Hr"],[4,6,"V"]];
+  E.forEach(([a,b,t])=>{ const [xa,ya]=pos[a],[xb,yb]=pos[b]; let d; if(t=="H") d=`M${xa+W} ${ya+H/2}H${xb}`; else if(t=="V") d=`M${xa+W/2} ${ya+H}V${yb}`; else d=`M${xa} ${ya+H/2}H${xb+W}`; svg.appendChild(sv("path",{class:"edge","marker-end":"url(#arrF)",d})); });
+  svg.appendChild(sv("text",{x:20,y:448,style:"font-size:13px;fill:"+css("--ink2")},"Se repite en cada llegada y en cada tick de 15 minutos."));
+  svg.appendChild(sv("text",{x:20,y:468,style:"font-size:13px;fill:"+css("--ink2")},"Si un lote falla, la tarjeta vuelve al paso 1 con un intento más."));
+}
+function showFlow(id){ const n=D.flow.find(x=>x.id==id); $$("#flowSvg .node").forEach(g=>g.classList.toggle("sel",g.dataset.id==id));
+  $("#flowDetail").innerHTML = `<h3>${n.titulo}</h3><dl><dt>Qué hace</dt><dd>${n.que}</dd><dt>Por qué</dt><dd>${n.porque}</dd><dt>Evidencia</dt><dd>${n.evidencia}</dd></dl>`; }
+let setSel="pub5k", refSel="starter", kindSel="todos";
+function setsList(){ return [["pub5k","Público 5 000"],["pub150k","Público 150 000"],["HOLD","Decisión (HOLD)"],["FINAL","Validación (FINAL)"],["FIN2","Datos frescos (FIN2)"]]; }
+function getRef(){ // devuelve {rows:[{k,ref,fin}], titulo}
+  if(setSel.startsWith("pub")){ const p=D.pub[setSel.slice(3)], r=p[refSel]; if(!r) return null; return {pub:true, ref:r, fin:p.final}; }
+  const S=D.sets[setSel]; let sc=S.scen; if(kindSel!="todos") sc=sc.filter(x=>x.kind==kindSel); return {pub:false, sc}; }
+function drawBA(){
+  const g=getRef(); const box=$("#beforeAfter"); $("#kindWrap").style.display = setSel.startsWith("pub")?"none":"";
+  if(!g){ box.innerHTML="<p class='note'>No hay medición de la versión anterior para este conjunto.</p>"; $("#baNotes").innerHTML=""; return; }
+  let rows;
+  if(g.pub){ rows=[["Coste",100*g.fin.cost/g.ref.cost,"%"],["Tiempo medio",100*g.fin.lead/g.ref.lead,"%"],["Percentil 95",100*g.fin.lead95/g.ref.lead95,"%"]]; var rcp=g.fin.rcp-g.ref.rcp; var wins=null; }
+  else { const M=(k)=>{ const a=g.sc.map(x=>100*x.fin[k]/x[refSel][k]); return a.reduce((s,v)=>s+v,0)/a.length; };
+    rows=[["Coste",M("cost"),"%"],["Tiempo medio",M("lead"),"%"],["Percentil 95",M("p95"),"%"]]; var rcp=g.sc.reduce((s,x)=>s+(x.fin.rcp-x[refSel].rcp),0)/g.sc.length;
+    var wins=g.sc.filter(x=>x.fin.cost<x[refSel].cost&&x.fin.lead<x[refSel].lead&&x.fin.p95<x[refSel].p95&&x.fin.rcp>x[refSel].rcp).length; var n=g.sc.length; }
+  const W=520,H=210,mx=130; const svg=sv("svg",{viewBox:`0 0 ${W} ${H}`}); const lo=60,hi=120; const X=v=>mx+(Math.max(lo,Math.min(hi,v))-lo)/(hi-lo)*(W-mx-30);
+  [60,80,100,120].forEach(t=>{ svg.appendChild(sv("line",{x1:X(t),x2:X(t),y1:16,y2:H-30,stroke:css("--line")})); svg.appendChild(sv("text",{x:X(t),y:H-12,"text-anchor":"middle",style:"font-size:11px;fill:"+css("--ink2")},t+" %")); });
+  rows.forEach((r,i)=>{ const y=34+i*52; svg.appendChild(sv("text",{x:0,y:y+5,style:"font-size:13px;fill:"+css("--ink")},r[0])); svg.appendChild(sv("rect",{x:mx,y:y-9,width:X(100)-mx,height:18,rx:5,fill:css("--line")})); svg.appendChild(sv("rect",{x:mx,y:y-9,width:Math.max(2,X(r[1])-mx),height:18,rx:5,fill:css("--blue"),opacity:.92})); svg.appendChild(sv("text",{x:Math.min(X(r[1])+6,W-52),y:y+5,style:"font-size:12px;font-weight:700;fill:"+(X(r[1])+6>W-60?"#fff":css("--ink"))},fmt(r[1],1)+" %")); });
+  box.innerHTML=""; box.appendChild(svg);
+  const refName = refSel=="starter" ? "punto de partida" : "primera versión";
+  const minSaved = g.pub ? g.ref.lead-g.fin.lead : g.sc.reduce((s,x)=>s+(x[refSel].lead-x.fin.lead),0)/g.sc.length;
+  const mkp = v => (v>=0?"+":"−")+fmt(Math.abs(v),3);
+  $("#baNotes").innerHTML = `<div class="grid g2">` +
+    kpiCard(pct(rows[0][1],100,1), "Coste", `frente ${refSel=="starter"?"al punto de partida":"a la primera versión"}`) + kpiCard(pct(rows[1][1],100,1), "Tiempo medio", `unos ${fmt(minSaved,0)} minutos menos por tarjeta`) +
+    kpiCard(pct(rows[2][1],100,1), "Percentil 95", "tiempo en que se entrega el 95 %") + kpiCard(mkp(rcp), "Satisfacción (RCP)", "puntos de diferencia") + `</div>` +
+    (wins!==null?`<p style="margin:12px 0 0"><b>${wins} de ${n}</b> escenarios mejoran las cuatro métricas a la vez.</p>`:`<p class="note" style="margin:12px 0 0">Escenario público real, medido con el motor oficial.</p>`);
+}
+function drawScore(){
+  $("#scoreTable").innerHTML = `<tr><th>Característica</th><th>Qué palanca la mueve</th><th class="num">Máx.</th></tr>` + D.score.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td class="num">20</td></tr>`).join("");
+  const w=$("#weights"); w.innerHTML = D.weights.map(([k,v],i)=>`<div style="display:flex;align-items:center;gap:10px;margin:7px 0"><span style="width:130px;font-size:13px">${k}</span><div class="bar" style="flex:1"><span style="width:${v}%;background:${[css("--blue"),css("--mid"),css("--sky"),css("--aqua")][i]}"></span></div><span style="width:40px;text-align:right">${v} %</span></div>`).join("");
+}
+
+/* ---------- 4 evidencia ---------- */
+let optHi=null;
+function drawOpt(){
+  const svg=$("#optSvg"); svg.innerHTML=""; const W=640,H=300,L=46,B=30,T=14,R=14; const all=Object.values(D.opt.series).flat(); const lo=Math.min(...all), hi=Math.max(...all); const n=Math.max(...Object.values(D.opt.series).map(a=>a.length));
+  const X=i=>L+i/(n-1)*(W-L-R), Y=v=>T+(1-(v-lo)/(hi-lo||1))*(H-T-B);
+  for(let k=0;k<=4;k++){ const v=lo+(hi-lo)*k/4, y=Y(v); svg.appendChild(sv("line",{x1:L,x2:W-R,y1:y,y2:y,stroke:css("--line")})); svg.appendChild(sv("text",{x:L-6,y:y+4,"text-anchor":"end",style:"font-size:11px;fill:"+css("--ink2")},fmt(v,2))); }
+  [0,10,20,30,40,50,60].filter(t=>t<n).forEach(t=>svg.appendChild(sv("text",{x:X(t),y:H-8,"text-anchor":"middle",style:"font-size:11px;fill:"+css("--ink2")},t+1)));
+  Object.entries(D.opt.series).forEach(([k,a])=>{ const on = !optHi||optHi==k; const p=sv("path",{d:a.map((v,i)=>(i?"L":"M")+X(i)+" "+Y(v)).join(""),fill:"none",stroke:D.opt.colors[k],"stroke-width":on?2.6:1.2,opacity:on?1:.28}); svg.appendChild(p); });
+  const lg=$("#optLegend"); lg.innerHTML=""; Object.keys(D.opt.series).forEach(k=>{ const b=el("button",{class:"pill","aria-pressed":optHi==k},`<i style="display:inline-block;width:10px;height:10px;border-radius:3px;background:${D.opt.colors[k]};margin-right:6px"></i>${D.opt.names[k]}`); b.onclick=()=>{ optHi = optHi==k?null:k; drawOpt(); }; lg.appendChild(b); });
+}
+function drawOptTable(){
+  $("#optTable").innerHTML = `<tr><th>Método</th><th class="num">Mejor J</th><th class="num">Ensayos al umbral</th></tr>` + D.opt.table.map(r=>`<tr><td>${r[0]}</td><td class="num">${fmt(r[1],3)}</td><td class="num">${r[2]===null?"n/d":r[2]}</td></tr>`).join("");
+  $("#optNote").textContent = D.opt.note;
+}
+function drawSel(){
+  const svg=$("#selSvg"); svg.innerHTML=""; const rows=D.sel; const W=640,H=320,L=120,T=10,B=26; const hi=Math.max(...rows.map(r=>r.proxy))*1.12, lo=0; const bh=(H-T-B)/rows.length;
+  const X=v=>L+(v-lo)/(hi-lo)*(W-L-60);
+  rows.forEach((r,i)=>{ const y=T+i*bh; const c = r.cand=="incumbente"? css("--yellow") : r.elegible ? css("--blue") : "#9AA7BF"; svg.appendChild(sv("text",{x:L-8,y:y+bh/2+4,"text-anchor":"end",style:"font-size:12px;fill:"+css("--ink")},r.cand)); svg.appendChild(sv("rect",{x:L,y:y+3,width:X(r.proxy)-L,height:bh-8,rx:4,fill:c})); svg.appendChild(sv("text",{x:X(r.proxy)+6,y:y+bh/2+4,style:"font-size:12px;fill:"+css("--ink2")},fmt(r.proxy,1))); });
+  svg.appendChild(sv("text",{x:L,y:H-6,style:"font-size:11px;fill:"+css("--ink2")},"Puntos proxy de cohorte (4 métricas de negocio, máximo 80)"));
+  $("#selRules").innerHTML = D.sel_rules.map(t=>`<li>${t}</li>`).join(""); $("#selWinner").innerHTML = D.sel_winner;
+}
+let vSet="FIN2", vMet="cost";
+function drawDumb(){
+  const S=D.sets[vSet]; const sc=S.scen; const svg=$("#dumbSvg"); svg.innerHTML=""; const rowH=22, W=560, L=150, T=22, B=26, H=T+B+rowH*sc.length; svg.setAttribute("viewBox",`0 0 ${W} ${H}`);
+  const rcp = vMet=="rcp"; const val=x=> rcp ? x.fin.rcp-x.starter.rcp : 100*x.fin[vMet]/x.starter[vMet];
+  const vs=sc.map(val); const lo=Math.min(...vs, rcp?0:100)-(rcp?0.02:4), hi=Math.max(...vs, rcp?0:100)+(rcp?0.02:4); const X=v=>L+(v-lo)/(hi-lo)*(W-L-24);
+  const base = rcp?0:100; svg.appendChild(sv("line",{x1:X(base),x2:X(base),y1:T-6,y2:H-B,stroke:css("--yellow"),"stroke-width":2}));
+  svg.appendChild(sv("text",{x:W-4,y:12,"text-anchor":"end",style:"font-size:11px;fill:"+css("--ink2")},rcp?"línea amarilla: 0 (sin cambio)":"línea amarilla: 100 % = punto de partida"));
+  sc.forEach((x,i)=>{ const y=T+i*rowH+rowH/2; svg.appendChild(sv("text",{x:L-8,y:y+4,"text-anchor":"end",style:"font-size:11.5px;fill:"+css("--ink")},x.name.replace(/^[a-z0-9]+_/,""))); svg.appendChild(sv("line",{x1:X(base),x2:X(val(x)),y1:y,y2:y,stroke:css("--sky"),"stroke-width":3})); svg.appendChild(sv("circle",{cx:X(val(x)),cy:y,r:5,fill:css("--blue")})); const tt=sv("title"); tt.textContent=`${x.name}: ${fmt(val(x),rcp?3:1)}${rcp?"":" %"}`; svg.lastChild.appendChild(tt); });
+  const t=rcp?[lo,0,hi]:[Math.ceil(lo/10)*10,100]; t.forEach(v=>svg.appendChild(sv("text",{x:X(v),y:H-8,"text-anchor":"middle",style:"font-size:11px;fill:"+css("--ink2")},fmt(v,rcp?2:0)+(rcp?"":" %"))));
+  const gt=D.gates_tabla; $("#gateTable").innerHTML = `<tr><th>Conjunto</th><th class="num">Gates propuesta</th><th class="num">Gates punto de partida</th><th class="num">Retención</th></tr>` + gt.map(r=>`<tr><td>${r[0]}</td><td class="num">${r[1]}</td><td class="num">${r[2]}</td><td class="num">${r[3]}</td></tr>`).join("");
+}
+function drawControls(){ $("#controls").innerHTML = "<b style='font-size:13px'>Controles aplicados</b><ul style='margin:6px 0 0;padding-left:18px;font-size:13px'>" + D.controles.map(c=>`<li style="margin:3px 0">${c}</li>`).join("") + "</ul>"; }
+function drawAbl(){
+  const svg=$("#ablSvg"); svg.innerHTML=""; const rows=D.abl; const W=760,H=340,L=250,T=8,B=8; const hi=Math.max(...rows.map(r=>r.proxy))*1.15; const bh=(H-T-B)/rows.length; const X=v=>L+v/hi*(W-L-90);
+  rows.forEach((r,i)=>{ const y=T+i*bh; const isFull=r.v=="Propuesta completa"; svg.appendChild(sv("text",{x:L-8,y:y+bh/2+4,"text-anchor":"end",style:"font-size:14px;fill:"+css("--ink")},r.v)); svg.appendChild(sv("rect",{x:L,y:y+3,width:X(r.proxy)-L,height:bh-8,rx:4,fill:isFull?css("--aqua"):css("--blue")})); svg.appendChild(sv("text",{x:X(r.proxy)+6,y:y+bh/2+5,style:"font-size:13px;fill:"+css("--ink2")},`${fmt(r.proxy,1)}  (${r.dom}/${D.abl_n})`)); });
+  $("#ablNote").textContent = D.abl_note;
+}
+
+/* ---------- 5 conclusiones ---------- */
+function items(id,arr){ $(id).innerHTML = arr.map(a=>`<div class="item"><b>${a[0]}</b>${a[1]}${a[2]?`<div style="margin-top:4px"><span class="chip ${a[3]||""}">${a[2]}</span></div>`:""}</div>`).join(""); }
+function drawEnd(){ items("#concl",D.concl); items("#limit",D.limit); items("#next",D.next); }
+
+/* ---------- arranque ---------- */
+function bindText(){ for(const k of [2,3,4,5]){ $("#t"+k).innerHTML=D.titulos[k]; $("#i"+k).innerHTML=D.ideas[k]; $("#k"+k).textContent=D.kickers[k]; } }
+function init(){ bindText();
+  
+  group($("#setBtns"), setsList(), k=>{ setSel=k; if(k.startsWith("pub")===false) kindSel="todos"; drawKinds(); drawBA(); }, setSel);
+  group($("#refBtns"), [["starter","Punto de partida"],["v1","Primera versión"]], k=>{ refSel=k; drawBA(); }, refSel);
+  drawKinds();
+  group($("#vSetBtns"), [["HOLD","HOLD"],["FINAL","FINAL"],["FIN2","FIN2"]], k=>{ vSet=k; drawDumb(); }, vSet);
+  group($("#vMetBtns"), [["cost","Coste"],["lead","Tiempo medio"],["p95","Percentil 95"],["rcp","Satisfacción"]], k=>{ vMet=k; drawDumb(); }, vMet);
+  redrawAll(); showFlow(D.flow[0].id); go((+location.hash.slice(1)||1)-1);
+}
+function drawKinds(){ group($("#kindBtns"), [["todos","Todos"],["base","Base"],["peak","Pico"],["rural_holiday","Rural y festivos"],["catalog","Catálogo"]], k=>{ kindSel=k; drawBA(); }, kindSel); }
+function redrawAll(){ drawCover(); drawLife(); drawGates(); drawData(); drawStart(); drawFlow(null); drawBA(); drawScore(); drawOpt(); drawOptTable(); drawSel(); drawDumb(); drawControls(); drawAbl(); drawEnd(); const sel=$("#flowDetail h3"); if(sel){ const n=D.flow.find(x=>x.titulo==sel.textContent); if(n) $$("#flowSvg .node").forEach(g=>g.classList.toggle("sel",g.dataset.id==n.id)); } }
+init();
+</script>
+</body>
+</html>

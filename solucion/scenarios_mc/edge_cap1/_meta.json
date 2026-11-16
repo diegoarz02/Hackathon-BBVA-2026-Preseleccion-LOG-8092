@@ -1,0 +1,18 @@
+{
+  "scenario": "SYN-BASE-00078",
+  "kind": "base",
+  "seed": 78,
+  "n": 2500,
+  "carriers": 5,
+  "cluster_share": 0.326,
+  "night_factor": 0.0,
+  "peaks": [],
+  "holidays": [
+    "2026-02-04",
+    "2026-04-09"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 9
+}

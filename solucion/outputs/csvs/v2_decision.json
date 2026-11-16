@@ -1,0 +1,156 @@
+{
+ "regla": "elegible (gates + dominancia HOLD y FINAL) y mejora ROBUSTA en puntos por escenario vs incumbente (IC95 inferior > 0)",
+ "robustez_puntos_vs_incumbente": {
+  "grid#1": {
+   "dPuntos_medio": -2.4791666666666634,
+   "IC95": [
+    -6.160823528381829,
+    1.6455692043271704
+   ],
+   "gana_en": 17,
+   "n": 32
+  },
+  "grid#2": {
+   "dPuntos_medio": -2.4791666666666634,
+   "IC95": [
+    -6.156353621605041,
+    1.6668650793650843
+   ],
+   "gana_en": 17,
+   "n": 32
+  },
+  "random#1": {
+   "dPuntos_medio": -16.833333333333332,
+   "IC95": [
+    -21.06679874991045,
+    -12.141630116959064
+   ],
+   "gana_en": 3,
+   "n": 32
+  },
+  "random#2": {
+   "dPuntos_medio": -14.850694444444445,
+   "IC95": [
+    -18.251733958017542,
+    -11.132451709124146
+   ],
+   "gana_en": 3,
+   "n": 32
+  },
+  "sobol#1": {
+   "dPuntos_medio": -9.54861111111111,
+   "IC95": [
+    -14.267157230145473,
+    -4.308120748299317
+   ],
+   "gana_en": 7,
+   "n": 32
+  },
+  "sobol#2": {
+   "dPuntos_medio": -6.166666666666664,
+   "IC95": [
+    -10.684711680371073,
+    -1.542412453527458
+   ],
+   "gana_en": 11,
+   "n": 32
+  },
+  "tpe#1": {
+   "dPuntos_medio": -3.3749999999999973,
+   "IC95": [
+    -7.987882642191197,
+    1.4138661239135963
+   ],
+   "gana_en": 16,
+   "n": 32
+  },
+  "tpe#2": {
+   "dPuntos_medio": -0.3576388888888842,
+   "IC95": [
+    -4.109475974567433,
+    4.011515538527039
+   ],
+   "gana_en": 17,
+   "n": 32
+  },
+  "cmaes#1": {
+   "dPuntos_medio": -3.5416666666666643,
+   "IC95": [
+    -7.303410649706942,
+    0.3363004575964992
+   ],
+   "gana_en": 14,
+   "n": 32
+  },
+  "cmaes#2": {
+   "dPuntos_medio": -2.7604166666666643,
+   "IC95": [
+    -7.423665973665972,
+    2.425787363067294
+   ],
+   "gana_en": 17,
+   "n": 32
+  },
+  "tpe#2_ns": {
+   "dPuntos_medio": -0.739583333333328,
+   "IC95": [
+    -4.5750020917001315,
+    3.6019444814963064
+   ],
+   "gana_en": 16,
+   "n": 32
+  },
+  "wu0": {
+   "dPuntos_medio": 0.8090277777777781,
+   "IC95": [
+    -1.9837218482506431,
+    4.040830721003138
+   ],
+   "gana_en": 16,
+   "n": 32
+  },
+  "wf05": {
+   "dPuntos_medio": -5.4097222222222205,
+   "IC95": [
+    -8.566161123817382,
+    -1.863992561329947
+   ],
+   "gana_en": 8,
+   "n": 32
+  },
+  "wu0_wf05": {
+   "dPuntos_medio": -7.184027777777773,
+   "IC95": [
+    -11.57614661654135,
+    -2.3320782596311265
+   ],
+   "gana_en": 10,
+   "n": 32
+  }
+ },
+ "shortlist_a_confirmar_en_FIN2": [],
+ "ganador_provisional": "incumbente",
+ "conservar_incumbente": true,
+ "params_ganador": {
+  "w_time": 6.0,
+  "w_vip": 8.0,
+  "w_fail": 1.0,
+  "vip_fail_extra": 500.0,
+  "terminal_extra": 3000.0,
+  "w_unit": 1.0,
+  "unit_util_gamma": 1.0,
+  "hold_p_min": 0.5,
+  "hold_prior": 0.15,
+  "hold_prior_n": 6.0,
+  "hold_second": 1,
+  "hold_full_release": 1,
+  "hold_cap_min": 45.0,
+  "assign_k": 24,
+  "la_tau": 240.0,
+  "up_wait_thr": 0.5,
+  "up_units": 2
+ },
+ "params_shortlist": {},
+ "ganador_final": "incumbente",
+ "motivo": "Con escenarios fieles a los datos reales (desfase de llegadas dentro del cluster ~ U(0, 45 min)) ningun candidato del re-ajuste supera de forma robusta (IC95 inferior > 0 en puntos por percentil) a las constantes de la 1.a corrida; se conservan, con el bucle de despacho corregido."
+}

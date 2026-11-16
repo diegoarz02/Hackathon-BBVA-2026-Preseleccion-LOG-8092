@@ -1,0 +1,328 @@
+{
+ "edge_stress_up": {
+  "scenario": "SYN-PEAK-00071",
+  "kind": "peak",
+  "seed": 71,
+  "n": 4000,
+  "carriers": 5,
+  "cluster_share": 0.276,
+  "night_factor": 0.5,
+  "peaks": [
+   [
+    42,
+    9,
+    2.2443327437786804
+   ],
+   [
+    51,
+    4,
+    1.8320387892456507
+   ]
+  ],
+  "holidays": [
+   "2026-01-09",
+   "2026-04-09"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 5,
+  "split": "edge"
+ },
+ "edge_stress_noup": {
+  "scenario": "SYN-PEAK-00071",
+  "kind": "peak",
+  "seed": 71,
+  "n": 4000,
+  "carriers": 5,
+  "cluster_share": 0.276,
+  "night_factor": 0.5,
+  "peaks": [
+   [
+    42,
+    9,
+    2.2443327437786804
+   ],
+   [
+    51,
+    4,
+    1.8320387892456507
+   ]
+  ],
+  "holidays": [
+   "2026-01-09",
+   "2026-04-09"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 5,
+  "split": "edge"
+ },
+ "edge_stress_xl": {
+  "scenario": "SYN-PEAK-00072",
+  "kind": "peak",
+  "seed": 72,
+  "n": 12000,
+  "carriers": 4,
+  "cluster_share": 0.451,
+  "night_factor": 0.5,
+  "peaks": [
+   [
+    31,
+    4,
+    1.879964881216722
+   ]
+  ],
+  "holidays": [
+   "2026-01-17",
+   "2026-02-28"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 17,
+  "split": "edge"
+ },
+ "edge_empty": {
+  "scenario": "SYN-BASE-00073",
+  "kind": "base",
+  "seed": 73,
+  "n": 0,
+  "carriers": 5,
+  "cluster_share": 0.348,
+  "night_factor": 1.0,
+  "peaks": [],
+  "holidays": [
+   "2026-04-13",
+   "2026-04-17"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 221,
+  "id_style": "public",
+  "fleet_units": 5,
+  "split": "edge"
+ },
+ "edge_one": {
+  "scenario": "SYN-BASE-00074",
+  "kind": "base",
+  "seed": 74,
+  "n": 1,
+  "carriers": 5,
+  "cluster_share": 0.468,
+  "night_factor": 0.5,
+  "peaks": [],
+  "holidays": [
+   "2026-03-23",
+   "2026-04-15"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 5,
+  "split": "edge"
+ },
+ "edge_tiny": {
+  "scenario": "SYN-BASE-00075",
+  "kind": "base",
+  "seed": 75,
+  "n": 25,
+  "carriers": 5,
+  "cluster_share": 0.264,
+  "night_factor": 0.0,
+  "peaks": [],
+  "holidays": [
+   "2026-01-10",
+   "2026-03-30"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 5,
+  "split": "edge"
+ },
+ "edge_opaque_ids": {
+  "scenario": "SYN-BASE-00076",
+  "kind": "base",
+  "seed": 76,
+  "n": 3000,
+  "carriers": 5,
+  "cluster_share": 0.442,
+  "night_factor": 0.5,
+  "peaks": [],
+  "holidays": [
+   "2026-02-04",
+   "2026-04-12"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "opaque",
+  "fleet_units": 11,
+  "split": "edge"
+ },
+ "edge_no_upgrades": {
+  "scenario": "SYN-BASE-00077",
+  "kind": "base",
+  "seed": 77,
+  "n": 3000,
+  "carriers": 5,
+  "cluster_share": 0.436,
+  "night_factor": 0.5,
+  "peaks": [],
+  "holidays": [
+   "2026-02-22",
+   "2026-04-16"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 321,
+  "id_style": "public",
+  "fleet_units": 11,
+  "split": "edge"
+ },
+ "edge_cap1": {
+  "scenario": "SYN-BASE-00078",
+  "kind": "base",
+  "seed": 78,
+  "n": 2500,
+  "carriers": 5,
+  "cluster_share": 0.326,
+  "night_factor": 0.0,
+  "peaks": [],
+  "holidays": [
+   "2026-02-04",
+   "2026-04-09"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 9,
+  "split": "edge"
+ },
+ "edge_no_hard_access": {
+  "scenario": "SYN-RURAL_HOLIDAY-00079",
+  "kind": "rural_holiday",
+  "seed": 79,
+  "n": 2500,
+  "carriers": 4,
+  "cluster_share": 0.476,
+  "night_factor": 1.0,
+  "peaks": [],
+  "holidays": [
+   "2026-01-12",
+   "2026-01-14",
+   "2026-02-01",
+   "2026-02-28",
+   "2026-03-15"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 495,
+  "id_style": "public",
+  "fleet_units": 9,
+  "split": "edge"
+ },
+ "edge_all_closed_sun_hol": {
+  "scenario": "SYN-RURAL_HOLIDAY-00080",
+  "kind": "rural_holiday",
+  "seed": 80,
+  "n": 2500,
+  "carriers": 6,
+  "cluster_share": 0.421,
+  "night_factor": 0.0,
+  "peaks": [],
+  "holidays": [
+   "2026-02-18",
+   "2026-02-22",
+   "2026-03-21",
+   "2026-03-25",
+   "2026-03-28"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 382,
+  "id_style": "public",
+  "fleet_units": 11,
+  "split": "edge"
+ },
+ "edge_single_carrier": {
+  "scenario": "SYN-BASE-00081",
+  "kind": "base",
+  "seed": 81,
+  "n": 2500,
+  "carriers": 5,
+  "cluster_share": 0.33,
+  "night_factor": 0.0,
+  "peaks": [],
+  "holidays": [
+   "2026-01-12",
+   "2026-02-21"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 12,
+  "split": "edge"
+ },
+ "edge_zone_uncovered": {
+  "scenario": "SYN-RURAL_HOLIDAY-00082",
+  "kind": "rural_holiday",
+  "seed": 82,
+  "n": 2500,
+  "carriers": 6,
+  "cluster_share": 0.499,
+  "night_factor": 0.5,
+  "peaks": [],
+  "holidays": [
+   "2026-01-09",
+   "2026-02-01",
+   "2026-02-13",
+   "2026-03-08",
+   "2026-03-11",
+   "2026-03-18",
+   "2026-03-21",
+   "2026-03-27",
+   "2026-04-05"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 473,
+  "id_style": "public",
+  "fleet_units": 12,
+  "split": "edge"
+ },
+ "edge_burst_1500": {
+  "scenario": "SYN-BASE-00083",
+  "kind": "base",
+  "seed": 83,
+  "n": 3000,
+  "carriers": 5,
+  "cluster_share": 0.295,
+  "night_factor": 0.5,
+  "peaks": [],
+  "holidays": [
+   "2026-01-21",
+   "2026-02-02"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 13,
+  "split": "edge"
+ },
+ "edge_burst_bigfleet": {
+  "scenario": "SYN-BASE-00084",
+  "kind": "base",
+  "seed": 84,
+  "n": 3000,
+  "carriers": 5,
+  "cluster_share": 0.42,
+  "night_factor": 0.0,
+  "peaks": [],
+  "holidays": [
+   "2026-02-14",
+   "2026-03-11"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 13,
+  "split": "edge"
+ }
+}

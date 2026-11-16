@@ -1,0 +1,42 @@
+{
+  "candidato_raiz": {
+    "imports": [
+      "__future__",
+      "collections",
+      "heapq",
+      "interfaces"
+    ],
+    "imports_permitidos": true,
+    "llamadas_prohibidas": [],
+    "usos_de_modulos_prohibidos": [],
+    "tiene_clase_CandidateStrategy": true,
+    "sha256": "7a8b9dbe0e4c57d661e06e32355e46c8892e1f758673082516b252df67b7ba5e"
+  },
+  "submission_identico_a_raiz": true,
+  "protegidos_alterados": [],
+  "submission_estructura_exacta": true,
+  "submission_entradas": [
+    "STRATEGY.md",
+    "ai_conversations",
+    "candidate_strategy.py",
+    "generated_artifacts",
+    "submission_manifest.json"
+  ],
+  "ai_conversations_archivos": [
+    "claude-code-sesion-01.md",
+    "cowork-sesion-01.md"
+  ],
+  "ai_conversations_con_archivos_y_sin_gitkeep": true,
+  "strategy_palabras": 2468,
+  "strategy_<=2500": true,
+  "strategy_menciona_LEG07_y_LEG12": true,
+  "manifest_valido_schema": true,
+  "manifest_candidate": "[correo de inscripcion omitido]",
+  "manifest_candidate_name": "Diego Alonso Araujo Villegas",
+  "manifest_lista_coincide_con_carpeta": true,
+  "manifest_conversation_files_existen": true,
+  "manifest_sin_claves_extra_y_modelos": true,
+  "generated_artifacts_exclusiones_ok": true,
+  "generated_artifacts_archivos": 73,
+  "generated_artifacts_MB": 1.86
+}

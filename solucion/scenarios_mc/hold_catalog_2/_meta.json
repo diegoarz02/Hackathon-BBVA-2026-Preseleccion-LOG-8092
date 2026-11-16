@@ -1,0 +1,18 @@
+{
+  "scenario": "SYN-CATALOG-09302",
+  "kind": "catalog",
+  "seed": 9302,
+  "n": 8985,
+  "carriers": 4,
+  "cluster_share": 0.213,
+  "night_factor": 1.0,
+  "peaks": [],
+  "holidays": [
+    "2026-02-19",
+    "2026-02-24"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 278,
+  "id_style": "public",
+  "fleet_units": 37
+}

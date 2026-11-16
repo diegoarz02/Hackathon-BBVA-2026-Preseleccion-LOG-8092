@@ -1,0 +1,21 @@
+{
+  "scenario": "SYN-RURAL_HOLIDAY-09201",
+  "kind": "rural_holiday",
+  "seed": 9201,
+  "n": 5651,
+  "carriers": 4,
+  "cluster_share": 0.235,
+  "night_factor": 1.0,
+  "peaks": [],
+  "holidays": [
+    "2026-01-15",
+    "2026-02-26",
+    "2026-03-13",
+    "2026-03-26",
+    "2026-04-03"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 119,
+  "id_style": "public",
+  "fleet_units": 20
+}

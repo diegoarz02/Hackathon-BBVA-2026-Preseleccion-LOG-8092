@@ -1,0 +1,45 @@
+# Kit oficial del reto (propiedad de BBVA, repositorio publico oficial: bbvaHackaton2026/BBVA-Hackaton-2026).
+# No se redistribuye aqui. Si lo copias al lado para correr la estrategia, esto evita subirlo por error.
+/engine/
+/data/
+/scenarios/
+/anexos/
+/interfaces.py
+/run.py
+/run_150k.py
+/protected_files.sha256
+/performance_report.schema.json
+/submission_manifest.schema.json
+/PRUEBA_TECNICA.md
+/EVALUACION.md
+/FAQ.md
+/REGLAS_PUBLICAS.md
+/tests/test_candidate_strategy_smoke.py
+/.gitattributes
+/output/
+/_jury_export/
+
+# Conversaciones completas con asistentes de IA entregadas a la organizacion: no se publican
+/submission/ai_conversations/
+
+# Copias de trabajo, prompts, informes intermedios, referencias con licencia y borradores
+/solucion/src/
+/solucion/notebooks/
+/solucion/presentacion/
+/solucion/scratch/
+/solucion/referencias_usadas/
+/solucion/PROMPT_*.md
+/solucion/PUSH_INSTRUCTIONS.md
+/solucion/STRATEGY_borrador.md
+/solucion/informe_cowork*.md
+/solucion/informe_parts/
+
+# Entorno y secretos
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.deepeval/

@@ -1,0 +1,4 @@
+escenario,estrategia,status,admitted,delivered,returned,unresolved,hold_breaches,sla_breach_rate,rcp,cost_total,lead_mean,lead_p95,avg_batch,pristine,cpu_s_mediana3,cpu_s_runs,cpu_neta_s,rss_mib_mediana3,rss_neta_mib,wall_s_mediana3
+public_150k,noop,COMPLETED,150000,0,0,150000,150000,1.0,1.0,300000000,,,0.0,True,9.734375,"[9.8, 9.02, 9.73]",0.0,27.38671875,0.0,48.524338900002476
+public_150k,starter,COMPLETED,150000,149800,32,168,837,0.00578,9.876,138126792,225.591,1565.0,1.0,True,40.515625,"[42.5, 40.52, 38.72]",30.78125,112.50390625,85.1171875,147.2102150999999
+public_150k,final,COMPLETED,150000,149982,18,0,0,0.004247,9.929,111100128,193.478,1515.0,1.276,True,32.953125,"[32.7, 34.34, 32.95]",23.21875,27.19921875,-0.1875,131.09294330000557

@@ -1,0 +1,42 @@
+[
+ {
+  "comando": "python run.py",
+  "codigo_salida": 0,
+  "segundos": 10.1,
+  "ultima_linea": "reporte=output\\performance_report.json",
+  "estado": "COMPLETED",
+  "integridad": true,
+  "UNRESOLVED": 0,
+  "retencion": 0,
+  "SLA": 0.0024
+ },
+ {
+  "comando": "python -S run.py",
+  "codigo_salida": 0,
+  "segundos": 10.4,
+  "ultima_linea": "reporte=output\\performance_report.json",
+  "estado": "COMPLETED",
+  "integridad": true,
+  "UNRESOLVED": 0,
+  "retencion": 0,
+  "SLA": 0.0024
+ },
+ {
+  "comando": "python run_150k.py",
+  "codigo_salida": 0,
+  "segundos": 134.5,
+  "ultima_linea": "reporte=output\\performance_report_150k.json",
+  "estado": "COMPLETED",
+  "integridad": true,
+  "UNRESOLVED": 0,
+  "retencion": 0,
+  "SLA": 0.004247
+ },
+ {
+  "comando": "python -m unittest discover -s tests",
+  "codigo_salida": 0,
+  "segundos": 0.2,
+  "ultima_linea": "OK",
+  "estado": "OK"
+ }
+]

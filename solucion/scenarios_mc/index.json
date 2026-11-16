@@ -1,0 +1,1351 @@
+{
+ "tune_base_0": {
+  "scenario": "SYN-BASE-01000",
+  "kind": "base",
+  "seed": 1000,
+  "n": 2611,
+  "carriers": 5,
+  "cluster_share": 0.356,
+  "night_factor": 1.0,
+  "peaks": [],
+  "holidays": [
+   "2026-03-27",
+   "2026-04-08"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 342,
+  "id_style": "public",
+  "fleet_units": 11,
+  "split": "tune"
+ },
+ "tune_base_1": {
+  "scenario": "SYN-BASE-01001",
+  "kind": "base",
+  "seed": 1001,
+  "n": 3564,
+  "carriers": 5,
+  "cluster_share": 0.384,
+  "night_factor": 1.0,
+  "peaks": [],
+  "holidays": [
+   "2026-01-27",
+   "2026-03-12"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 106,
+  "id_style": "public",
+  "fleet_units": 17,
+  "split": "tune"
+ },
+ "tune_base_2": {
+  "scenario": "SYN-BASE-01002",
+  "kind": "base",
+  "seed": 1002,
+  "n": 4545,
+  "carriers": 5,
+  "cluster_share": 0.314,
+  "night_factor": 1.0,
+  "peaks": [],
+  "holidays": [
+   "2026-02-04",
+   "2026-04-18"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 16,
+  "split": "tune"
+ },
+ "tune_peak_0": {
+  "scenario": "SYN-PEAK-01100",
+  "kind": "peak",
+  "seed": 1100,
+  "n": 3811,
+  "carriers": 5,
+  "cluster_share": 0.258,
+  "night_factor": 1.0,
+  "peaks": [
+   [
+    27,
+    8,
+    1.8036563966653376
+   ]
+  ],
+  "holidays": [
+   "2026-02-27",
+   "2026-03-01"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 13,
+  "split": "tune"
+ },
+ "tune_peak_1": {
+  "scenario": "SYN-PEAK-01101",
+  "kind": "peak",
+  "seed": 1101,
+  "n": 4455,
+  "carriers": 4,
+  "cluster_share": 0.466,
+  "night_factor": 0.5,
+  "peaks": [
+   [
+    37,
+    9,
+    2.426916496818727
+   ]
+  ],
+  "holidays": [
+   "2026-03-10",
+   "2026-04-13"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 9,
+  "split": "tune"
+ },
+ "tune_peak_2": {
+  "scenario": "SYN-PEAK-01102",
+  "kind": "peak",
+  "seed": 1102,
+  "n": 3412,
+  "carriers": 6,
+  "cluster_share": 0.363,
+  "night_factor": 1.0,
+  "peaks": [
+   [
+    24,
+    9,
+    2.0130266056535966
+   ]
+  ],
+  "holidays": [
+   "2026-03-24",
+   "2026-04-07"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 16,
+  "split": "tune"
+ },
+ "tune_rural_holiday_0": {
+  "scenario": "SYN-RURAL_HOLIDAY-01200",
+  "kind": "rural_holiday",
+  "seed": 1200,
+  "n": 2626,
+  "carriers": 5,
+  "cluster_share": 0.373,
+  "night_factor": 0.5,
+  "peaks": [],
+  "holidays": [
+   "2026-01-16",
+   "2026-01-24",
+   "2026-02-06",
+   "2026-03-30",
+   "2026-04-08"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 331,
+  "id_style": "public",
+  "fleet_units": 11,
+  "split": "tune"
+ },
+ "tune_rural_holiday_1": {
+  "scenario": "SYN-RURAL_HOLIDAY-01201",
+  "kind": "rural_holiday",
+  "seed": 1201,
+  "n": 2609,
+  "carriers": 6,
+  "cluster_share": 0.333,
+  "night_factor": 0.0,
+  "peaks": [],
+  "holidays": [
+   "2026-03-06",
+   "2026-03-08",
+   "2026-03-20",
+   "2026-04-05",
+   "2026-04-12"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 435,
+  "id_style": "public",
+  "fleet_units": 14,
+  "split": "tune"
+ },
+ "tune_rural_holiday_2": {
+  "scenario": "SYN-RURAL_HOLIDAY-01202",
+  "kind": "rural_holiday",
+  "seed": 1202,
+  "n": 3508,
+  "carriers": 5,
+  "cluster_share": 0.214,
+  "night_factor": 0.5,
+  "peaks": [],
+  "holidays": [
+   "2026-01-11",
+   "2026-01-23",
+   "2026-02-20",
+   "2026-03-27",
+   "2026-04-07",
+   "2026-04-18"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 439,
+  "id_style": "public",
+  "fleet_units": 14,
+  "split": "tune"
+ },
+ "tune_catalog_0": {
+  "scenario": "SYN-CATALOG-01300",
+  "kind": "catalog",
+  "seed": 1300,
+  "n": 3586,
+  "carriers": 4,
+  "cluster_share": 0.476,
+  "night_factor": 0.5,
+  "peaks": [],
+  "holidays": [
+   "2026-01-20",
+   "2026-04-11"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 137,
+  "id_style": "public",
+  "fleet_units": 11,
+  "split": "tune"
+ },
+ "tune_catalog_1": {
+  "scenario": "SYN-CATALOG-01301",
+  "kind": "catalog",
+  "seed": 1301,
+  "n": 2889,
+  "carriers": 5,
+  "cluster_share": 0.209,
+  "night_factor": 0.0,
+  "peaks": [],
+  "holidays": [
+   "2026-01-18",
+   "2026-01-30"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 442,
+  "id_style": "public",
+  "fleet_units": 11,
+  "split": "tune"
+ },
+ "tune_catalog_2": {
+  "scenario": "SYN-CATALOG-01302",
+  "kind": "catalog",
+  "seed": 1302,
+  "n": 2573,
+  "carriers": 5,
+  "cluster_share": 0.353,
+  "night_factor": 1.0,
+  "peaks": [],
+  "holidays": [
+   "2026-03-12",
+   "2026-04-18"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 372,
+  "id_style": "public",
+  "fleet_units": 9,
+  "split": "tune"
+ },
+ "hold_base_0": {
+  "scenario": "SYN-BASE-09000",
+  "kind": "base",
+  "seed": 9000,
+  "n": 6821,
+  "carriers": 5,
+  "cluster_share": 0.273,
+  "night_factor": 0.0,
+  "peaks": [],
+  "holidays": [
+   "2026-01-09",
+   "2026-03-31"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 23,
+  "split": "hold"
+ },
+ "hold_base_1": {
+  "scenario": "SYN-BASE-09001",
+  "kind": "base",
+  "seed": 9001,
+  "n": 4072,
+  "carriers": 5,
+  "cluster_share": 0.388,
+  "night_factor": 1.0,
+  "peaks": [],
+  "holidays": [
+   "2026-03-05",
+   "2026-04-02"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 427,
+  "id_style": "public",
+  "fleet_units": 20,
+  "split": "hold"
+ },
+ "hold_base_2": {
+  "scenario": "SYN-BASE-09002",
+  "kind": "base",
+  "seed": 9002,
+  "n": 4185,
+  "carriers": 5,
+  "cluster_share": 0.478,
+  "night_factor": 1.0,
+  "peaks": [],
+  "holidays": [
+   "2026-03-18",
+   "2026-03-25"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 222,
+  "id_style": "public",
+  "fleet_units": 20,
+  "split": "hold"
+ },
+ "hold_base_3": {
+  "scenario": "SYN-BASE-09003",
+  "kind": "base",
+  "seed": 9003,
+  "n": 3394,
+  "carriers": 5,
+  "cluster_share": 0.453,
+  "night_factor": 1.0,
+  "peaks": [],
+  "holidays": [
+   "2026-01-26",
+   "2026-03-07"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 11,
+  "split": "hold"
+ },
+ "hold_peak_0": {
+  "scenario": "SYN-PEAK-09100",
+  "kind": "peak",
+  "seed": 9100,
+  "n": 2600,
+  "carriers": 6,
+  "cluster_share": 0.353,
+  "night_factor": 0.5,
+  "peaks": [
+   [
+    12,
+    8,
+    2.340314736063754
+   ],
+   [
+    3,
+    8,
+    2.485216309504861
+   ]
+  ],
+  "holidays": [
+   "2026-03-08",
+   "2026-04-02"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 11,
+  "split": "hold"
+ },
+ "hold_peak_1": {
+  "scenario": "SYN-PEAK-09101",
+  "kind": "peak",
+  "seed": 9101,
+  "n": 6662,
+  "carriers": 4,
+  "cluster_share": 0.269,
+  "night_factor": 0.5,
+  "peaks": [
+   [
+    59,
+    7,
+    2.1388583318920005
+   ]
+  ],
+  "holidays": [
+   "2026-01-13",
+   "2026-01-27"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 17,
+  "split": "hold"
+ },
+ "hold_peak_2": {
+  "scenario": "SYN-PEAK-09102",
+  "kind": "peak",
+  "seed": 9102,
+  "n": 7359,
+  "carriers": 5,
+  "cluster_share": 0.428,
+  "night_factor": 0.0,
+  "peaks": [
+   [
+    15,
+    10,
+    1.8016792738623635
+   ],
+   [
+    13,
+    10,
+    2.3045736567000144
+   ],
+   [
+    42,
+    9,
+    1.8138391641865532
+   ]
+  ],
+  "holidays": [
+   "2026-02-24",
+   "2026-03-29"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 27,
+  "split": "hold"
+ },
+ "hold_peak_3": {
+  "scenario": "SYN-PEAK-09103",
+  "kind": "peak",
+  "seed": 9103,
+  "n": 6469,
+  "carriers": 5,
+  "cluster_share": 0.362,
+  "night_factor": 1.0,
+  "peaks": [
+   [
+    21,
+    5,
+    2.3944828774105984
+   ],
+   [
+    77,
+    10,
+    2.4651035945408095
+   ]
+  ],
+  "holidays": [
+   "2026-01-05",
+   "2026-01-15"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 33,
+  "split": "hold"
+ },
+ "hold_rural_holiday_0": {
+  "scenario": "SYN-RURAL_HOLIDAY-09200",
+  "kind": "rural_holiday",
+  "seed": 9200,
+  "n": 3073,
+  "carriers": 5,
+  "cluster_share": 0.441,
+  "night_factor": 0.0,
+  "peaks": [],
+  "holidays": [
+   "2026-02-03",
+   "2026-02-13",
+   "2026-02-21",
+   "2026-03-09",
+   "2026-03-16",
+   "2026-03-25",
+   "2026-04-01"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 446,
+  "id_style": "public",
+  "fleet_units": 11,
+  "split": "hold"
+ },
+ "hold_rural_holiday_1": {
+  "scenario": "SYN-RURAL_HOLIDAY-09201",
+  "kind": "rural_holiday",
+  "seed": 9201,
+  "n": 5651,
+  "carriers": 4,
+  "cluster_share": 0.235,
+  "night_factor": 1.0,
+  "peaks": [],
+  "holidays": [
+   "2026-01-15",
+   "2026-02-26",
+   "2026-03-13",
+   "2026-03-26",
+   "2026-04-03"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 119,
+  "id_style": "public",
+  "fleet_units": 20,
+  "split": "hold"
+ },
+ "hold_rural_holiday_2": {
+  "scenario": "SYN-RURAL_HOLIDAY-09202",
+  "kind": "rural_holiday",
+  "seed": 9202,
+  "n": 3314,
+  "carriers": 5,
+  "cluster_share": 0.461,
+  "night_factor": 0.5,
+  "peaks": [],
+  "holidays": [
+   "2026-01-07",
+   "2026-01-17",
+   "2026-03-01",
+   "2026-03-05",
+   "2026-03-23"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 306,
+  "id_style": "public",
+  "fleet_units": 16,
+  "split": "hold"
+ },
+ "hold_rural_holiday_3": {
+  "scenario": "SYN-RURAL_HOLIDAY-09203",
+  "kind": "rural_holiday",
+  "seed": 9203,
+  "n": 5596,
+  "carriers": 6,
+  "cluster_share": 0.443,
+  "night_factor": 0.5,
+  "peaks": [],
+  "holidays": [
+   "2026-01-14",
+   "2026-01-24",
+   "2026-03-02",
+   "2026-03-08",
+   "2026-03-09",
+   "2026-03-20",
+   "2026-03-21",
+   "2026-04-15"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 450,
+  "id_style": "public",
+  "fleet_units": 24,
+  "split": "hold"
+ },
+ "hold_catalog_0": {
+  "scenario": "SYN-CATALOG-09300",
+  "kind": "catalog",
+  "seed": 9300,
+  "n": 5369,
+  "carriers": 6,
+  "cluster_share": 0.449,
+  "night_factor": 0.0,
+  "peaks": [],
+  "holidays": [
+   "2026-03-20",
+   "2026-04-14"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 205,
+  "id_style": "public",
+  "fleet_units": 28,
+  "split": "hold"
+ },
+ "hold_catalog_1": {
+  "scenario": "SYN-CATALOG-09301",
+  "kind": "catalog",
+  "seed": 9301,
+  "n": 7419,
+  "carriers": 4,
+  "cluster_share": 0.378,
+  "night_factor": 0.0,
+  "peaks": [],
+  "holidays": [
+   "2026-02-20",
+   "2026-02-25"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 278,
+  "id_style": "public",
+  "fleet_units": 29,
+  "split": "hold"
+ },
+ "hold_catalog_2": {
+  "scenario": "SYN-CATALOG-09302",
+  "kind": "catalog",
+  "seed": 9302,
+  "n": 8985,
+  "carriers": 4,
+  "cluster_share": 0.213,
+  "night_factor": 1.0,
+  "peaks": [],
+  "holidays": [
+   "2026-02-19",
+   "2026-02-24"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 278,
+  "id_style": "public",
+  "fleet_units": 37,
+  "split": "hold"
+ },
+ "hold_catalog_3": {
+  "scenario": "SYN-CATALOG-09303",
+  "kind": "catalog",
+  "seed": 9303,
+  "n": 6290,
+  "carriers": 4,
+  "cluster_share": 0.475,
+  "night_factor": 1.0,
+  "peaks": [],
+  "holidays": [
+   "2026-01-22",
+   "2026-04-04"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 325,
+  "id_style": "public",
+  "fleet_units": 20,
+  "split": "hold"
+ },
+ "final_base_0": {
+  "scenario": "SYN-BASE-12000",
+  "kind": "base",
+  "seed": 12000,
+  "n": 3396,
+  "carriers": 5,
+  "cluster_share": 0.39,
+  "night_factor": 0.5,
+  "peaks": [],
+  "holidays": [
+   "2026-02-23",
+   "2026-04-12"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 12,
+  "split": "final"
+ },
+ "final_base_1": {
+  "scenario": "SYN-BASE-12001",
+  "kind": "base",
+  "seed": 12001,
+  "n": 6618,
+  "carriers": 5,
+  "cluster_share": 0.308,
+  "night_factor": 1.0,
+  "peaks": [],
+  "holidays": [
+   "2026-01-10",
+   "2026-01-27"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 334,
+  "id_style": "public",
+  "fleet_units": 26,
+  "split": "final"
+ },
+ "final_base_2": {
+  "scenario": "SYN-BASE-12002",
+  "kind": "base",
+  "seed": 12002,
+  "n": 5381,
+  "carriers": 5,
+  "cluster_share": 0.202,
+  "night_factor": 0.5,
+  "peaks": [],
+  "holidays": [
+   "2026-04-01",
+   "2026-04-03"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 24,
+  "split": "final"
+ },
+ "final_base_3": {
+  "scenario": "SYN-BASE-12003",
+  "kind": "base",
+  "seed": 12003,
+  "n": 7619,
+  "carriers": 5,
+  "cluster_share": 0.263,
+  "night_factor": 0.0,
+  "peaks": [],
+  "holidays": [
+   "2026-02-09",
+   "2026-02-19"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 27,
+  "split": "final"
+ },
+ "final_peak_0": {
+  "scenario": "SYN-PEAK-12100",
+  "kind": "peak",
+  "seed": 12100,
+  "n": 3371,
+  "carriers": 5,
+  "cluster_share": 0.41,
+  "night_factor": 0.5,
+  "peaks": [
+   [
+    2,
+    9,
+    1.868555854362516
+   ]
+  ],
+  "holidays": [
+   "2026-01-30",
+   "2026-03-30"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 9,
+  "split": "final"
+ },
+ "final_peak_1": {
+  "scenario": "SYN-PEAK-12101",
+  "kind": "peak",
+  "seed": 12101,
+  "n": 7838,
+  "carriers": 5,
+  "cluster_share": 0.203,
+  "night_factor": 0.0,
+  "peaks": [
+   [
+    10,
+    7,
+    2.21684204691903
+   ]
+  ],
+  "holidays": [
+   "2026-02-07",
+   "2026-04-03"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 24,
+  "split": "final"
+ },
+ "final_peak_2": {
+  "scenario": "SYN-PEAK-12102",
+  "kind": "peak",
+  "seed": 12102,
+  "n": 4079,
+  "carriers": 6,
+  "cluster_share": 0.321,
+  "night_factor": 0.5,
+  "peaks": [
+   [
+    66,
+    5,
+    1.9464854087446872
+   ],
+   [
+    16,
+    4,
+    2.158157115751589
+   ]
+  ],
+  "holidays": [
+   "2026-02-01",
+   "2026-02-06"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 26,
+  "split": "final"
+ },
+ "final_peak_3": {
+  "scenario": "SYN-PEAK-12103",
+  "kind": "peak",
+  "seed": 12103,
+  "n": 5882,
+  "carriers": 5,
+  "cluster_share": 0.232,
+  "night_factor": 0.0,
+  "peaks": [
+   [
+    20,
+    3,
+    2.4552990630670983
+   ],
+   [
+    17,
+    3,
+    2.266220488632059
+   ],
+   [
+    78,
+    7,
+    2.0326447864418844
+   ]
+  ],
+  "holidays": [
+   "2026-02-27",
+   "2026-03-22"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 18,
+  "split": "final"
+ },
+ "final_rural_holiday_0": {
+  "scenario": "SYN-RURAL_HOLIDAY-12200",
+  "kind": "rural_holiday",
+  "seed": 12200,
+  "n": 6770,
+  "carriers": 5,
+  "cluster_share": 0.467,
+  "night_factor": 0.5,
+  "peaks": [],
+  "holidays": [
+   "2026-01-14",
+   "2026-01-19",
+   "2026-01-26",
+   "2026-02-01",
+   "2026-02-04",
+   "2026-02-26",
+   "2026-02-28",
+   "2026-03-08"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 415,
+  "id_style": "public",
+  "fleet_units": 29,
+  "split": "final"
+ },
+ "final_rural_holiday_1": {
+  "scenario": "SYN-RURAL_HOLIDAY-12201",
+  "kind": "rural_holiday",
+  "seed": 12201,
+  "n": 4584,
+  "carriers": 4,
+  "cluster_share": 0.421,
+  "night_factor": 0.0,
+  "peaks": [],
+  "holidays": [
+   "2026-01-18",
+   "2026-01-19",
+   "2026-02-14",
+   "2026-02-17",
+   "2026-03-13",
+   "2026-03-27",
+   "2026-03-29",
+   "2026-04-10"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 171,
+  "id_style": "public",
+  "fleet_units": 15,
+  "split": "final"
+ },
+ "final_rural_holiday_2": {
+  "scenario": "SYN-RURAL_HOLIDAY-12202",
+  "kind": "rural_holiday",
+  "seed": 12202,
+  "n": 3566,
+  "carriers": 4,
+  "cluster_share": 0.403,
+  "night_factor": 1.0,
+  "peaks": [],
+  "holidays": [
+   "2026-01-09",
+   "2026-01-12",
+   "2026-01-23",
+   "2026-02-24",
+   "2026-03-08",
+   "2026-03-09",
+   "2026-04-03"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 356,
+  "id_style": "public",
+  "fleet_units": 11,
+  "split": "final"
+ },
+ "final_rural_holiday_3": {
+  "scenario": "SYN-RURAL_HOLIDAY-12203",
+  "kind": "rural_holiday",
+  "seed": 12203,
+  "n": 3496,
+  "carriers": 6,
+  "cluster_share": 0.309,
+  "night_factor": 0.0,
+  "peaks": [],
+  "holidays": [
+   "2026-01-19",
+   "2026-02-13",
+   "2026-02-21",
+   "2026-03-02",
+   "2026-03-05",
+   "2026-03-16",
+   "2026-03-27"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 268,
+  "id_style": "public",
+  "fleet_units": 17,
+  "split": "final"
+ },
+ "final_catalog_0": {
+  "scenario": "SYN-CATALOG-12300",
+  "kind": "catalog",
+  "seed": 12300,
+  "n": 4760,
+  "carriers": 5,
+  "cluster_share": 0.36,
+  "night_factor": 0.5,
+  "peaks": [],
+  "holidays": [
+   "2026-01-30",
+   "2026-04-16"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 221,
+  "id_style": "public",
+  "fleet_units": 26,
+  "split": "final"
+ },
+ "final_catalog_1": {
+  "scenario": "SYN-CATALOG-12301",
+  "kind": "catalog",
+  "seed": 12301,
+  "n": 5148,
+  "carriers": 6,
+  "cluster_share": 0.274,
+  "night_factor": 1.0,
+  "peaks": [],
+  "holidays": [
+   "2026-01-07",
+   "2026-01-17"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 308,
+  "id_style": "public",
+  "fleet_units": 27,
+  "split": "final"
+ },
+ "final_catalog_2": {
+  "scenario": "SYN-CATALOG-12302",
+  "kind": "catalog",
+  "seed": 12302,
+  "n": 4900,
+  "carriers": 5,
+  "cluster_share": 0.328,
+  "night_factor": 0.5,
+  "peaks": [],
+  "holidays": [
+   "2026-03-16",
+   "2026-04-03"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 495,
+  "id_style": "public",
+  "fleet_units": 17,
+  "split": "final"
+ },
+ "final_catalog_3": {
+  "scenario": "SYN-CATALOG-12303",
+  "kind": "catalog",
+  "seed": 12303,
+  "n": 8004,
+  "carriers": 4,
+  "cluster_share": 0.462,
+  "night_factor": 0.5,
+  "peaks": [],
+  "holidays": [
+   "2026-01-25",
+   "2026-02-20"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 284,
+  "id_style": "public",
+  "fleet_units": 32,
+  "split": "final"
+ },
+ "fin2_base_0": {
+  "scenario": "SYN-BASE-15000",
+  "kind": "base",
+  "seed": 15000,
+  "n": 2567,
+  "carriers": 5,
+  "cluster_share": 0.273,
+  "night_factor": 0.0,
+  "peaks": [],
+  "holidays": [
+   "2026-02-02",
+   "2026-02-18"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 12,
+  "split": "fin2"
+ },
+ "fin2_base_1": {
+  "scenario": "SYN-BASE-15001",
+  "kind": "base",
+  "seed": 15001,
+  "n": 4071,
+  "carriers": 5,
+  "cluster_share": 0.492,
+  "night_factor": 1.0,
+  "peaks": [],
+  "holidays": [
+   "2026-03-17",
+   "2026-03-18"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 19,
+  "split": "fin2"
+ },
+ "fin2_base_2": {
+  "scenario": "SYN-BASE-15002",
+  "kind": "base",
+  "seed": 15002,
+  "n": 3664,
+  "carriers": 5,
+  "cluster_share": 0.298,
+  "night_factor": 0.0,
+  "peaks": [],
+  "holidays": [
+   "2026-01-16",
+   "2026-03-27"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 16,
+  "split": "fin2"
+ },
+ "fin2_base_3": {
+  "scenario": "SYN-BASE-15003",
+  "kind": "base",
+  "seed": 15003,
+  "n": 5317,
+  "carriers": 5,
+  "cluster_share": 0.283,
+  "night_factor": 0.0,
+  "peaks": [],
+  "holidays": [
+   "2026-02-06",
+   "2026-04-06"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 454,
+  "id_style": "public",
+  "fleet_units": 24,
+  "split": "fin2"
+ },
+ "fin2_peak_0": {
+  "scenario": "SYN-PEAK-15100",
+  "kind": "peak",
+  "seed": 15100,
+  "n": 6819,
+  "carriers": 5,
+  "cluster_share": 0.481,
+  "night_factor": 1.0,
+  "peaks": [
+   [
+    21,
+    5,
+    2.3722438297994293
+   ],
+   [
+    26,
+    10,
+    1.9599341502694707
+   ]
+  ],
+  "holidays": [
+   "2026-01-10",
+   "2026-01-15"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 24,
+  "split": "fin2"
+ },
+ "fin2_peak_1": {
+  "scenario": "SYN-PEAK-15101",
+  "kind": "peak",
+  "seed": 15101,
+  "n": 6708,
+  "carriers": 4,
+  "cluster_share": 0.219,
+  "night_factor": 0.5,
+  "peaks": [
+   [
+    8,
+    10,
+    1.8212454265256015
+   ],
+   [
+    61,
+    9,
+    2.2803502853824713
+   ]
+  ],
+  "holidays": [
+   "2026-01-20",
+   "2026-04-18"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 14,
+  "split": "fin2"
+ },
+ "fin2_peak_2": {
+  "scenario": "SYN-PEAK-15102",
+  "kind": "peak",
+  "seed": 15102,
+  "n": 6684,
+  "carriers": 4,
+  "cluster_share": 0.423,
+  "night_factor": 0.5,
+  "peaks": [
+   [
+    68,
+    9,
+    2.2487235796415854
+   ],
+   [
+    46,
+    10,
+    2.4796639396111244
+   ]
+  ],
+  "holidays": [
+   "2026-04-07",
+   "2026-04-13"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 26,
+  "split": "fin2"
+ },
+ "fin2_peak_3": {
+  "scenario": "SYN-PEAK-15103",
+  "kind": "peak",
+  "seed": 15103,
+  "n": 4365,
+  "carriers": 6,
+  "cluster_share": 0.257,
+  "night_factor": 0.5,
+  "peaks": [
+   [
+    18,
+    7,
+    1.942081691971322
+   ]
+  ],
+  "holidays": [
+   "2026-02-14",
+   "2026-03-25"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 300,
+  "id_style": "public",
+  "fleet_units": 20,
+  "split": "fin2"
+ },
+ "fin2_rural_holiday_0": {
+  "scenario": "SYN-RURAL_HOLIDAY-15200",
+  "kind": "rural_holiday",
+  "seed": 15200,
+  "n": 7505,
+  "carriers": 6,
+  "cluster_share": 0.264,
+  "night_factor": 0.5,
+  "peaks": [],
+  "holidays": [
+   "2026-01-05",
+   "2026-02-07",
+   "2026-02-25",
+   "2026-03-04",
+   "2026-03-11",
+   "2026-03-31",
+   "2026-04-16"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 410,
+  "id_style": "public",
+  "fleet_units": 48,
+  "split": "fin2"
+ },
+ "fin2_rural_holiday_1": {
+  "scenario": "SYN-RURAL_HOLIDAY-15201",
+  "kind": "rural_holiday",
+  "seed": 15201,
+  "n": 5431,
+  "carriers": 5,
+  "cluster_share": 0.284,
+  "night_factor": 0.5,
+  "peaks": [],
+  "holidays": [
+   "2026-01-18",
+   "2026-01-27",
+   "2026-02-26",
+   "2026-03-08",
+   "2026-03-15",
+   "2026-04-01",
+   "2026-04-12"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 132,
+  "id_style": "public",
+  "fleet_units": 24,
+  "split": "fin2"
+ },
+ "fin2_rural_holiday_2": {
+  "scenario": "SYN-RURAL_HOLIDAY-15202",
+  "kind": "rural_holiday",
+  "seed": 15202,
+  "n": 2607,
+  "carriers": 6,
+  "cluster_share": 0.42,
+  "night_factor": 0.0,
+  "peaks": [],
+  "holidays": [
+   "2026-01-05",
+   "2026-01-10",
+   "2026-01-18",
+   "2026-01-24",
+   "2026-01-31",
+   "2026-02-11",
+   "2026-02-28",
+   "2026-03-17",
+   "2026-04-01"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 317,
+  "id_style": "public",
+  "fleet_units": 16,
+  "split": "fin2"
+ },
+ "fin2_rural_holiday_3": {
+  "scenario": "SYN-RURAL_HOLIDAY-15203",
+  "kind": "rural_holiday",
+  "seed": 15203,
+  "n": 7524,
+  "carriers": 5,
+  "cluster_share": 0.445,
+  "night_factor": 0.5,
+  "peaks": [],
+  "holidays": [
+   "2026-01-25",
+   "2026-03-12",
+   "2026-03-18",
+   "2026-04-03",
+   "2026-04-17"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 364,
+  "id_style": "public",
+  "fleet_units": 27,
+  "split": "fin2"
+ },
+ "fin2_catalog_0": {
+  "scenario": "SYN-CATALOG-15300",
+  "kind": "catalog",
+  "seed": 15300,
+  "n": 3735,
+  "carriers": 5,
+  "cluster_share": 0.212,
+  "night_factor": 1.0,
+  "peaks": [],
+  "holidays": [
+   "2026-01-28",
+   "2026-03-04"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 490,
+  "id_style": "public",
+  "fleet_units": 14,
+  "split": "fin2"
+ },
+ "fin2_catalog_1": {
+  "scenario": "SYN-CATALOG-15301",
+  "kind": "catalog",
+  "seed": 15301,
+  "n": 5272,
+  "carriers": 5,
+  "cluster_share": 0.358,
+  "night_factor": 0.0,
+  "peaks": [],
+  "holidays": [
+   "2026-02-25",
+   "2026-03-28"
+  ],
+  "upgrades_enabled": false,
+  "influencer_bps": 257,
+  "id_style": "public",
+  "fleet_units": 19,
+  "split": "fin2"
+ },
+ "fin2_catalog_2": {
+  "scenario": "SYN-CATALOG-15302",
+  "kind": "catalog",
+  "seed": 15302,
+  "n": 6122,
+  "carriers": 5,
+  "cluster_share": 0.375,
+  "night_factor": 0.0,
+  "peaks": [],
+  "holidays": [
+   "2026-03-12",
+   "2026-03-30"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 331,
+  "id_style": "public",
+  "fleet_units": 17,
+  "split": "fin2"
+ },
+ "fin2_catalog_3": {
+  "scenario": "SYN-CATALOG-15303",
+  "kind": "catalog",
+  "seed": 15303,
+  "n": 4426,
+  "carriers": 6,
+  "cluster_share": 0.233,
+  "night_factor": 0.0,
+  "peaks": [],
+  "holidays": [
+   "2026-02-04",
+   "2026-03-08"
+  ],
+  "upgrades_enabled": true,
+  "influencer_bps": 351,
+  "id_style": "public",
+  "fleet_units": 20,
+  "split": "fin2"
+ }
+}

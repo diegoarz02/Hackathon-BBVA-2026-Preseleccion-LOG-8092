@@ -1,0 +1,28 @@
+{
+ "archivos": [
+  "claude-code-sesion-01.md"
+ ],
+ "estadisticas": {
+  "mensajes de Diego": 54,
+  "bloques de razonamiento que la transcripcion no guarda": 606,
+  "respuestas": 86,
+  "llamadas a herramientas": 802,
+  "resultados de herramientas": 800,
+  "resumenes de contexto": 1,
+  "imagenes omitidas": 12
+ },
+ "redactions": [
+  {
+   "file": "ai_conversations/claude-code-sesion-*.md",
+   "reason": "referencias a una persona ajena a la prueba: 127 sustituciones por [REDACTED: motivo]"
+  },
+  {
+   "file": "ai_conversations/claude-code-sesion-*.md",
+   "reason": "correos personales ajenos a la prueba: 5 sustituciones por [REDACTED: motivo]"
+  },
+  {
+   "file": "ai_conversations/claude-code-sesion-*.md",
+   "reason": "Salidas y entradas de herramientas recortadas a 1500 y 1800 caracteres con marcador explícito; avisos automáticos del entorno recortados; bloques de razonamiento interno que la transcripción no guarda"
+  }
+ ]
+}
